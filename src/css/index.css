@@ -1,0 +1,96 @@
+/* 
+    ***************
+    **default css**
+    *************** 
+*/
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+a:link,
+a:visited {
+  text-decoration: none;
+  color: black;
+}
+
+input {
+  padding: 0.4rem;
+  outline: none;
+  border: 1px solid grey;
+  border-radius: 5px;
+}
+
+input::placeholder {
+  color: #777;
+}
+
+button {
+  padding: 0.4rem;
+  outline: none;
+  border-radius: 5px;
+  border: 1px solid grey;
+  cursor: pointer;
+}
+
+.hidden {
+  visibility: hidden;
+  pointer-events: none;
+  opacity: 0;
+}
+
+/* 
+- Font sizes (px)
+10 / 12 / 14 / 16 / 18 / 20 / 24 / 30 / 36 / 44 / 52 / 62 / 74 / 86 / 98
+*/
+
+/* 
+- Spacing system (px)
+2 / 4 / 8 / 12 / 16 / 24 / 32 / 48 / 64 / 80 / 96 / 128
+*/
+
+/* 
+    ***************
+    ***html css****
+    *************** 
+*/
+
+html {
+  font-size: 62.5%;
+}
+
+/* 
+    *********************
+    **login section css**
+    ********************* 
+*/
+
+.login {
+  margin: 30vh auto;
+  width: 25%;
+  padding: 2.4rem;
+  background-color: skyblue;
+  border: 1px solid #666;
+  border-radius: 15px;
+  transition: all 0.5s;
+}
+
+.login-form {
+  display: flex;
+  flex-direction: column;
+  row-gap: 1.2rem;
+}
+
+.btn-login:hover {
+  background-color: #aaa;
+}
+
+.login-sign-up {
+  text-align: center;
+}
+
+.login-sign-up:hover {
+  text-decoration: underline;
+}
