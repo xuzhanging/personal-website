@@ -13,7 +13,11 @@
     <script defer src="./src/js/index.js"></script>
   </head>
   <body>
-    <section class="login" id="login-section">
+    <section class="loading" id="loading">
+      <div class="white-moon" id="white-moon"></div>
+      <div class="black-moon" id="black-moon"></div>
+    </section>
+    <section class="login hidden" id="login-section">
       <form action="#" class="login-form">
         <label for="full-name">账号</label>
         <input
@@ -33,11 +37,11 @@
           placeholder="输入您的密码"
           required
         />
-        <button type="submit" class="btn-login" id="btn-login">登录</button>
+        <a href="./src/html/personal.html" class="btn-login" id="btn-login"
+          >登录</a
+        >
         <a href="#" class="login-sign-up">没有账号？立即注册&rarr;</a>
       </form>
     </section>
-
-    <section></section>
   </body>
 </html>

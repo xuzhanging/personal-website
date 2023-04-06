@@ -10,6 +10,9 @@
   box-sizing: border-box;
 }
 
+body {
+  background-color: skyblue;
+}
 a:link,
 a:visited {
   text-decoration: none;
@@ -36,9 +39,7 @@ button {
 }
 
 .hidden {
-  visibility: hidden;
-  pointer-events: none;
-  opacity: 0;
+  display: none;
 }
 
 /* 
@@ -62,6 +63,60 @@ html {
 }
 
 /* 
+    ***************
+    ***loading css****
+    *************** 
+*/
+.loading {
+  position: relative;
+  overflow: hidden;
+  width: 100%;
+  height: 100vh;
+  background-color: #000;
+}
+
+.white-moon {
+  margin: 40vh auto;
+  width: 9.6rem;
+  height: 9.6rem;
+  background-color: #fff;
+  border-radius: 50%;
+  animation: color 6s linear forwards;
+}
+
+@keyframes move {
+  100% {
+    left: 49.2%;
+    bottom: 52%;
+    transform: scale(1.5);
+  }
+}
+
+@keyframes color {
+  100% {
+    background-color: #1c7ed6;
+    transform: scale(1.5);
+  }
+}
+
+@keyframes fade {
+  100% {
+    opacity: 0;
+  }
+}
+
+.black-moon {
+  position: absolute;
+  left: 55%;
+  bottom: 60%;
+  width: 9.6rem;
+  height: 9.6rem;
+  background-color: #000;
+  border-radius: 50%;
+  animation: move 6s linear forwards;
+}
+
+/* 
     *********************
     **login section css**
     ********************* 
@@ -81,6 +136,15 @@ html {
   display: flex;
   flex-direction: column;
   row-gap: 1.2rem;
+}
+
+.btn-login {
+  display: inline-block;
+  padding: 0.4rem;
+  border-radius: 5px;
+  border: 1px solid grey;
+  cursor: pointer;
+  text-align: center;
 }
 
 .btn-login:hover {
