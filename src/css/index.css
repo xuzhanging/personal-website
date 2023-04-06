@@ -13,6 +13,7 @@
 body {
   background-color: skyblue;
 }
+
 a:link,
 a:visited {
   text-decoration: none;
@@ -75,26 +76,17 @@ html {
   background-color: #000;
 }
 
-.white-moon {
-  margin: 40vh auto;
-  width: 9.6rem;
-  height: 9.6rem;
-  background-color: #fff;
-  border-radius: 50%;
-  animation: color 6s linear forwards;
+@keyframes color {
+  100% {
+    background-color: #1c7ed6;
+    transform: scale(1.5);
+  }
 }
 
 @keyframes move {
   100% {
     left: 49.2%;
-    bottom: 52%;
-    transform: scale(1.5);
-  }
-}
-
-@keyframes color {
-  100% {
-    background-color: #1c7ed6;
+    bottom: 51%;
     transform: scale(1.5);
   }
 }
@@ -103,6 +95,15 @@ html {
   100% {
     opacity: 0;
   }
+}
+
+.white-moon {
+  margin: 40vh auto;
+  width: 9.6rem;
+  height: 9.6rem;
+  background-color: #fff;
+  border-radius: 50%;
+  animation: color 6s linear forwards;
 }
 
 .black-moon {
