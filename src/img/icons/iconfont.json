@@ -1,0 +1,23 @@
+{
+  "id": "",
+  "name": "",
+  "font_family": "iconfont",
+  "css_prefix_text": "icon-",
+  "description": "",
+  "glyphs": [
+    {
+      "icon_id": "2953960",
+      "name": "波浪能",
+      "font_class": "bolangneng",
+      "unicode": "e745",
+      "unicode_decimal": 59205
+    },
+    {
+      "icon_id": "29265290",
+      "name": "月亮",
+      "font_class": "yueliang",
+      "unicode": "e67b",
+      "unicode_decimal": 59003
+    }
+  ]
+}

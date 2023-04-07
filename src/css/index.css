@@ -177,7 +177,7 @@ html {
 }
 
 .welcome {
-  background-color: skyblue;
+  /* background-color: skyblue; */
   opacity: 0;
 }
 
@@ -186,6 +186,7 @@ html {
   display: flex;
   justify-content: space-between;
   background-color: #f6f6f6;
+  height: 12.5vh;
 }
 
 .logo {
@@ -232,4 +233,125 @@ html {
 
 .navigation-login:hover {
   background-color: #1c7ed6;
+}
+
+.description {
+  display: flex;
+  background-color: skyblue;
+  height: 87.5vh;
+}
+
+.description .left {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  /* justify-content: space-evenly; */
+  align-items: center;
+}
+
+.description .left .left-top {
+  padding: 4rem;
+  font-size: 4rem;
+  font-weight: 600;
+  color: #1c7ed6;
+}
+
+.description .left .left-center {
+  padding: 0 4rem 4rem 4rem;
+  font-size: 2rem;
+  color: #1c7ed6;
+}
+
+.description .left .left-bottom {
+  width: 100%;
+  display: flex;
+  justify-content: space-around;
+}
+
+.description .left .left-bottom a {
+  font-size: 2rem;
+  border-radius: 10px;
+  padding: 1.2rem 2.4rem;
+  background-color: #00a9f2;
+  color: #fff;
+}
+
+.description .left .left-bottom .build-your-website:hover {
+  background-color: #1c7ed6;
+}
+
+.description .left .left-bottom .about-moon {
+  background-color: skyblue;
+  color: #000;
+}
+
+.description .right {
+  position: relative;
+  flex: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+}
+
+@keyframes yueliang {
+  to {
+    opacity: 1;
+    filter: blur(3px);
+  }
+}
+
+.icon-yueliang {
+  display: inline-block;
+  color: #00a9f2;
+  font-size: 25rem !important;
+  text-shadow: 0 0 10px 10px black;
+  opacity: 0.5;
+  animation: yueliang 2s linear infinite alternate;
+}
+
+@keyframes bolang1 {
+  to {
+    left: 35%;
+    opacity: 0.5;
+  }
+}
+
+@keyframes bolang2 {
+  to {
+    left: 73%;
+    opacity: 0.5;
+  }
+}
+
+@keyframes bolang3 {
+  to {
+    left: -3%;
+    opacity: 0.5;
+  }
+}
+
+.icon-bolangneng {
+  opacity: 1;
+  position: absolute;
+  left: 0;
+  top: 40%;
+  color: #1c7ed6;
+  font-size: 30rem !important;
+  filter: blur(2px);
+}
+
+.bolang1 {
+  left: 33%;
+  animation: bolang1 2s linear infinite alternate;
+}
+
+.bolang2 {
+  left: 71%;
+  animation: bolang2 2s linear infinite alternate;
+}
+
+.bolang3 {
+  left: -5%;
+  animation: bolang3 2s linear infinite alternate;
 }
