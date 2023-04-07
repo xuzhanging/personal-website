@@ -2,10 +2,10 @@
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
-    <meta name="description" content="个人网站，记录前端学习、分享日常" />
+    <meta name="description" content="个人网站，记录前端学习、分享生活日常" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>欢迎来到乐亮的个人网站</title>
+    <title>Moon (^_^)~~-xuzhanging</title>
     <link rel="shortcut icon" href="./src/img/favicon.ico" />
     <link rel="apple-touch-icon" href="./src/img/apple-touch-icon.png" />
     <link rel="manifest" href="./manifest.webmanifest" />
@@ -13,10 +13,12 @@
     <script defer src="./src/js/index.js"></script>
   </head>
   <body>
+    <!-- 网页进入动画 -->
     <section class="loading" id="loading">
       <div class="white-moon" id="white-moon"></div>
       <div class="black-moon" id="black-moon"></div>
     </section>
+    <!-- 登录注册 -->
     <section class="login hidden" id="login-section">
       <form action="#" class="login-form">
         <label for="full-name">账号</label>
@@ -42,6 +44,38 @@
         >
         <a href="#" class="login-sign-up">没有账号？立即注册&rarr;</a>
       </form>
+    </section>
+    <!-- 欢迎页面 -->
+    <section class="welcome hidden" id="welcome-section">
+      <header class="welcome-header">
+        <a href="#" class="logo">
+          <img
+            src="./src/img/favicon-32x32.png"
+            alt="logo of this website, a blue moon"
+          />
+          <h1>Moon</h1>
+        </a>
+        <nav>
+          <ul class="navigation">
+            <li>
+              <a href="#">How it works</a>
+            </li>
+            <li>
+              <a href="#">Features</a>
+            </li>
+            <li>
+              <a href="#">About us</a>
+            </li>
+            <li>
+              <a href="#" class="navigation-login">Try for free</a>
+            </li>
+          </ul>
+        </nav>
+      </header>
+      <section class="description">
+        Now, it's time to build your own website, share your front-end
+        development learning experience and record your daily life.
+      </section>
     </section>
   </body>
 </html>

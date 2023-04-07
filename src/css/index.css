@@ -11,7 +11,8 @@
 }
 
 body {
-  background-color: skyblue;
+  background-color: #a5d8ff;
+  font-family: sans-serif;
 }
 
 a:link,
@@ -21,10 +22,10 @@ a:visited {
 }
 
 input {
-  padding: 0.4rem;
+  padding: 0.8rem;
   outline: none;
   border: 1px solid grey;
-  border-radius: 5px;
+  border-radius: 10px;
 }
 
 input::placeholder {
@@ -32,11 +33,15 @@ input::placeholder {
 }
 
 button {
-  padding: 0.4rem;
+  padding: 0.8rem;
   outline: none;
-  border-radius: 5px;
+  border-radius: 10px;
   border: 1px solid grey;
   cursor: pointer;
+}
+
+li {
+  list-style: none;
 }
 
 .hidden {
@@ -64,9 +69,9 @@ html {
 }
 
 /* 
-    ***************
-    ***loading css****
-    *************** 
+    **************************
+    ***loading section css****
+    ************************** 
 */
 .loading {
   position: relative;
@@ -141,15 +146,15 @@ html {
 
 .btn-login {
   display: inline-block;
-  padding: 0.4rem;
-  border-radius: 5px;
+  padding: 0.8rem;
+  border-radius: 10px;
   border: 1px solid grey;
   cursor: pointer;
   text-align: center;
 }
 
 .btn-login:hover {
-  background-color: #aaa;
+  background-color: #4dabf7;
 }
 
 .login-sign-up {
@@ -158,4 +163,73 @@ html {
 
 .login-sign-up:hover {
   text-decoration: underline;
+}
+
+/* 
+    ***********************
+    **welcome section css**
+    *********************** 
+*/
+@keyframes fadein {
+  to {
+    opacity: 1;
+  }
+}
+
+.welcome {
+  background-color: skyblue;
+  opacity: 0;
+}
+
+.welcome-header {
+  padding: 2.4rem 4.8rem;
+  display: flex;
+  justify-content: space-between;
+  background-color: #f6f6f6;
+}
+
+.logo {
+  display: flex;
+  align-items: center;
+  gap: 0.8rem;
+}
+
+.logo img {
+  width: 5rem;
+}
+
+.logo h1 {
+  font-size: 3rem;
+  color: #00a9f2;
+}
+
+.navigation {
+  display: flex;
+  align-items: center;
+  gap: 9.6rem;
+  height: 100%;
+}
+
+.navigation a {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  font-size: 1.6rem;
+  font-weight: 600;
+  color: #444;
+}
+
+.navigation a:hover {
+  color: #00a9f2;
+}
+
+.navigation-login {
+  padding: 1.2rem 2.4rem;
+  background-color: #00a9f2;
+  color: #fff !important;
+  border-radius: 10px;
+}
+
+.navigation-login:hover {
+  background-color: #1c7ed6;
 }
