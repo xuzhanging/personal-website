@@ -1,54 +1,4 @@
 /* 
-    ***************
-    **default css**
-    *************** 
-*/
-
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-}
-
-body {
-  background-color: #a5d8ff;
-  font-family: sans-serif;
-}
-
-a:link,
-a:visited {
-  text-decoration: none;
-  color: black;
-}
-
-input {
-  padding: 0.8rem;
-  outline: none;
-  border: 1px solid grey;
-  border-radius: 10px;
-}
-
-input::placeholder {
-  color: #777;
-}
-
-button {
-  padding: 0.8rem;
-  outline: none;
-  border-radius: 10px;
-  border: 1px solid grey;
-  cursor: pointer;
-}
-
-li {
-  list-style: none;
-}
-
-.hidden {
-  display: none;
-}
-
-/* 
 - Font sizes (px)
 10 / 12 / 14 / 16 / 18 / 20 / 24 / 30 / 36 / 44 / 52 / 62 / 74 / 86 / 98
 */
@@ -59,20 +9,31 @@ li {
 */
 
 /* 
-    ***************
-    ***html css****
-    *************** 
+    **********************************
+    *******loading section css********
+    ********************************** 
 */
-
-html {
-  font-size: 62.5%;
+@keyframes white-moon-color {
+  100% {
+    background-color: #00a9f2;
+    transform: scale(1.5);
+  }
 }
 
-/* 
-    **************************
-    ***loading section css****
-    ************************** 
-*/
+@keyframes black-moon-position {
+  100% {
+    left: 49.2%;
+    bottom: 49%;
+    transform: scale(1.5);
+  }
+}
+
+@keyframes loading-fade-out {
+  100% {
+    opacity: 0;
+  }
+}
+
 .loading {
   position: relative;
   overflow: hidden;
@@ -81,53 +42,31 @@ html {
   background-color: #000;
 }
 
-@keyframes color {
-  100% {
-    background-color: #1c7ed6;
-    transform: scale(1.5);
-  }
-}
-
-@keyframes move {
-  100% {
-    left: 49.2%;
-    bottom: 51%;
-    transform: scale(1.5);
-  }
-}
-
-@keyframes fade {
-  100% {
-    opacity: 0;
-  }
-}
-
 .white-moon {
   margin: 40vh auto;
-  width: 9.6rem;
-  height: 9.6rem;
+  width: 20vh;
+  height: 20vh;
   background-color: #fff;
   border-radius: 50%;
-  animation: color 6s linear forwards;
+  animation: white-moon-color 6s linear forwards;
 }
 
 .black-moon {
   position: absolute;
   left: 55%;
   bottom: 60%;
-  width: 9.6rem;
-  height: 9.6rem;
+  width: 20vh;
+  height: 20vh;
   background-color: #000;
   border-radius: 50%;
-  animation: move 6s linear forwards;
+  animation: black-moon-position 6s linear forwards;
 }
 
 /* 
-    *********************
-    **login section css**
-    ********************* 
+    ************************************
+    **********login section css*********
+    ************************************ 
 */
-
 .login {
   margin: 30vh auto;
   width: 25%;
@@ -166,27 +105,26 @@ html {
 }
 
 /* 
-    ***********************
-    **welcome section css**
-    *********************** 
+    ************************************
+    **********welcome section css*******
+    ************************************ 
 */
-@keyframes fadein {
+@keyframes welcome-fade-in {
   to {
     opacity: 1;
   }
 }
 
 .welcome {
-  /* background-color: skyblue; */
   opacity: 0;
 }
 
+/* *************header*************** */
 .welcome-header {
   padding: 2.4rem 4.8rem;
   display: flex;
   justify-content: space-between;
   background-color: #f6f6f6;
-  height: 12.5vh;
 }
 
 .logo {
@@ -235,17 +173,18 @@ html {
   background-color: #1c7ed6;
 }
 
+/* *************main*************** */
 .description {
   display: flex;
-  background-color: skyblue;
-  height: 87.5vh;
+  margin: 0 auto;
+  background-color: #f6f6f6;
+  width: 130rem;
 }
 
 .description .left {
   flex: 1;
   display: flex;
   flex-direction: column;
-  /* justify-content: space-evenly; */
   align-items: center;
 }
 
@@ -253,13 +192,13 @@ html {
   padding: 4rem;
   font-size: 4rem;
   font-weight: 600;
-  color: #1c7ed6;
+  color: #333;
 }
 
 .description .left .left-center {
   padding: 0 4rem 4rem 4rem;
   font-size: 2rem;
-  color: #1c7ed6;
+  color: #555;
 }
 
 .description .left .left-bottom {
@@ -281,8 +220,12 @@ html {
 }
 
 .description .left .left-bottom .about-moon {
-  background-color: skyblue;
-  color: #000;
+  background-color: #fff;
+  color: #555;
+}
+
+.description .left .left-bottom .about-moon:hover {
+  background-color: #f6f6f6;
 }
 
 .description .right {
@@ -296,49 +239,47 @@ html {
 
 @keyframes yueliang {
   to {
-    opacity: 1;
+    opacity: 0.5;
     filter: blur(3px);
   }
 }
 
-.icon-yueliang {
-  display: inline-block;
-  color: #00a9f2;
-  font-size: 25rem !important;
-  text-shadow: 0 0 10px 10px black;
-  opacity: 0.5;
-  animation: yueliang 2s linear infinite alternate;
-}
-
 @keyframes bolang1 {
   to {
-    left: 35%;
-    opacity: 0.5;
+    left: 36.7%;
+    opacity: 0.8;
   }
 }
 
 @keyframes bolang2 {
   to {
-    left: 73%;
-    opacity: 0.5;
+    left: 76.4%;
+    opacity: 0.8;
   }
 }
 
 @keyframes bolang3 {
   to {
     left: -3%;
-    opacity: 0.5;
+    opacity: 0.8;
   }
 }
 
-.icon-bolangneng {
+.icon-yueliang {
+  color: #00a9f2;
+  font-size: 25rem !important;
   opacity: 1;
+  animation: yueliang 2s linear infinite alternate;
+}
+
+.icon-bolangneng {
+  opacity: 0.5;
   position: absolute;
   left: 0;
   top: 40%;
   color: #1c7ed6;
   font-size: 30rem !important;
-  filter: blur(2px);
+  filter: blur(3px);
 }
 
 .bolang1 {
@@ -347,11 +288,11 @@ html {
 }
 
 .bolang2 {
-  left: 71%;
+  left: 72.7%;
   animation: bolang2 2s linear infinite alternate;
 }
 
 .bolang3 {
-  left: -5%;
+  left: -6.7%;
   animation: bolang3 2s linear infinite alternate;
 }
