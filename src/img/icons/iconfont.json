@@ -6,11 +6,53 @@
   "description": "",
   "glyphs": [
     {
+      "icon_id": "783681",
+      "name": "后期维护 维护 维护管理",
+      "font_class": "houqiweihuweihuweihuguanli",
+      "unicode": "e68d",
+      "unicode_decimal": 59021
+    },
+    {
+      "icon_id": "1311981",
+      "name": "对",
+      "font_class": "dui",
+      "unicode": "e63f",
+      "unicode_decimal": 58943
+    },
+    {
+      "icon_id": "1727406",
+      "name": "46免费-线性",
+      "font_class": "mianfei-xianxing",
+      "unicode": "e8b1",
+      "unicode_decimal": 59569
+    },
+    {
       "icon_id": "2953960",
       "name": "波浪能",
       "font_class": "bolangneng",
       "unicode": "e745",
       "unicode_decimal": 59205
+    },
+    {
+      "icon_id": "11399584",
+      "name": "简单模型",
+      "font_class": "jiandanmoxing",
+      "unicode": "e639",
+      "unicode_decimal": 58937
+    },
+    {
+      "icon_id": "11891759",
+      "name": "security",
+      "font_class": "security",
+      "unicode": "e667",
+      "unicode_decimal": 58983
+    },
+    {
+      "icon_id": "12592403",
+      "name": "更新",
+      "font_class": "gengxin",
+      "unicode": "e74b",
+      "unicode_decimal": 59211
     },
     {
       "icon_id": "29265290",

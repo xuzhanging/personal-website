@@ -44,13 +44,13 @@
         <a href="./src/html/personal.html" class="btn-login" id="btn-login"
           >登录</a
         >
-        <a href="#" class="login-sign-up">没有账号？立即注册&rarr;</a>
+        <a href="" class="login-sign-up">没有账号？立即注册&rarr;</a>
       </form>
     </section>
     <!-- 欢迎页面 -->
     <section class="welcome hidden" id="welcome-section">
       <header class="welcome-header" id="welcome-nav">
-        <a href="#" class="logo">
+        <a href="./index.html" class="logo">
           <img
             src="./src/img/favicon-32x32.png"
             alt="logo of this website, a blue moon"
@@ -63,13 +63,15 @@
               <a href="#about">About moon</a>
             </li>
             <li>
-              <a href="#">Features</a>
+              <a href="#features">Features</a>
             </li>
-            <li>
+            <!-- <li>
               <a href="#">Join us</a>
-            </li>
+            </li> -->
             <li>
-              <a href="#" class="navigation-login">Just do it</a>
+              <a href="#" class="navigation-login" id="navigation-login"
+                >Just do it</a
+              >
             </li>
           </ul>
         </nav>
@@ -88,7 +90,9 @@
               your own website is just one step. Go for it and just do it!
             </div>
             <div class="left-bottom">
-              <a href="#" class="build-your-website">Build your website</a>
+              <a href="#" class="build-your-website" id="build-your-website"
+                >Build your website</a
+              >
               <a href="#about" class="learn-more">Learn more &darr;</a>
             </div>
           </div>
@@ -133,8 +137,43 @@
             </div>
           </div>
         </section>
-        <section class="features"></section>
+        <section class="features" id="features">
+          <h2>Features</h2>
+          <h3>Why should choose Moon</h3>
+          <ul>
+            <li>
+              <span class="iconfont icon-mianfei-xianxing"></span>
+              <p>Completely Free</p>
+              <span class="iconfont icon-dui"></span>
+            </li>
+            <li>
+              <span class="iconfont icon-jiandanmoxing"></span>
+              <p>Simple Operation</p>
+              <span class="iconfont icon-dui"></span>
+            </li>
+            <li>
+              <span class="iconfont icon-security"></span>
+              <p>Good Security</p>
+              <span class="iconfont icon-dui"></span>
+            </li>
+            <li>
+              <span class="iconfont icon-houqiweihuweihuweihuguanli"></span>
+              <p>Provide Maintenance</p>
+              <span class="iconfont icon-dui"></span>
+            </li>
+            <li>
+              <span class="iconfont icon-gengxin"></span>
+              <p>Continuously Update</p>
+              <span class="iconfont icon-dui"></span>
+            </li>
+          </ul>
+          <p class="more-features">
+            There are more interesting and fantastic functions waiting for
+            you,<a href="#" id="try-it-now">try it now&rarr;</a>
+          </p>
+        </section>
       </main>
+      <footer></footer>
     </section>
   </body>
 </html>

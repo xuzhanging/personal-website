@@ -39,7 +39,7 @@
   overflow: hidden;
   width: 100%;
   height: 100vh;
-  background-color: #000;
+  background-color: #f6f6f6;
 }
 
 .white-moon {
@@ -57,7 +57,7 @@
   bottom: 60%;
   width: 20vh;
   height: 20vh;
-  background-color: #000;
+  background-color: #f6f6f6;
   border-radius: 50%;
   animation: black-moon-position 6s linear forwards;
 }
@@ -68,13 +68,17 @@
     ************************************ 
 */
 .login {
-  margin: 30vh auto;
-  width: 25%;
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 40rem;
   padding: 2.4rem;
   background-color: skyblue;
   border: 1px solid #666;
   border-radius: 15px;
   transition: all 0.5s;
+  z-index: 999;
 }
 
 .login-form {
@@ -189,6 +193,9 @@
 }
 
 /* *************main*************** */
+main {
+  border-bottom: 1px solid #ddd;
+}
 .description {
   display: flex;
   margin: 0 auto;
@@ -313,16 +320,19 @@
   animation: bolang3 2s linear infinite alternate;
 }
 
-.about-moon {
+.about-moon,
+.features h2 {
   margin: 0 auto;
   padding-top: 9.6rem;
   width: 130rem;
 }
 
-.about-moon h2 {
+.about-moon h2,
+.features h2 {
   padding: 1.6rem 1.6rem;
   font-size: 2rem;
   color: #00a9f2;
+  text-transform: uppercase;
 }
 
 .about-moon .details {
@@ -333,4 +343,61 @@
 .details-img {
   justify-self: center;
   align-self: center;
+}
+
+.features {
+  padding-top: 9.6rem;
+}
+
+.features h3 {
+  padding: 1.2rem 0;
+  line-height: 2;
+  font-size: 3.6rem;
+  color: #555;
+  text-align: center;
+}
+
+.features li {
+  display: grid;
+  grid-template-columns: 2fr 1fr 2fr;
+  gap: 2rem;
+  font-size: 2.4rem;
+  align-items: center;
+  color: #666;
+  margin-bottom: 2.4rem;
+}
+
+.features li span {
+  justify-self: end;
+  font-size: 2.4rem !important;
+}
+
+.features li span:last-child {
+  justify-self: start;
+  color: #00a9f2;
+}
+
+.features li p {
+  justify-self: start;
+}
+
+.more-features {
+  padding: 2.4rem 0;
+  font-size: 2.4rem;
+  color: #444;
+  text-align: center;
+}
+
+.more-features a {
+  color: #00a9f2;
+}
+
+.more-features a:hover {
+  color: #1c7ed6;
+  text-decoration: underline;
+}
+
+/* *************footer*************** */
+footer {
+  padding-top: 9.6rem;
 }

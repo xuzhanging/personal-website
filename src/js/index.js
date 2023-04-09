@@ -6,13 +6,22 @@ const blackMoon = document.querySelector("#black-moon");
 const whiteMoon = document.querySelector("#white-moon");
 
 // select login section elements
-// const loginSection = document.querySelector("#login-section");
-// const btnLogin = document.querySelector("#btn-login");
+const loginSection = document.querySelector("#login-section");
+const inputFullName = document.querySelector("#full-name");
+const btnLogin = document.querySelector("#btn-login");
 
 // select welcome section elements
 const welcome = document.querySelector("#welcome-section");
 const welcomeNav = document.querySelector("#welcome-nav");
+const navLogin = document.querySelector("#navigation-login");
 const description = document.querySelector("#main-description");
+
+// select all links
+const links = document.querySelectorAll("a:link");
+
+// select open login links
+const buildNow = document.querySelector("#build-your-website");
+const tryNow = document.querySelector("#try-it-now");
 
 // loading animation finished, then loading section fade out.
 blackMoon.addEventListener("animationend", function () {
@@ -28,13 +37,26 @@ setTimeout(function () {
   welcome.style.animation = "welcome-fade-in 2s linear forwards";
 }, 11000);
 
-// const events = ["click"];
-// events.forEach((e) => {
-//   btnLogin.addEventListener(e, function (e) {
-//     e.preventDefault();
-//     loginSection.classList.add("hidden");
-//   });
-// });
+// login button
+const loginBtn = [navLogin, buildNow, tryNow];
+loginBtn.forEach((login) =>
+  login.addEventListener("click", function (e) {
+    e.preventDefault();
+    e.stopPropagation();
+    loginSection.classList.toggle("hidden");
+    inputFullName.focus();
+    welcome.classList.toggle("blur");
+    document.body.addEventListener("click", function (e) {
+      if (
+        !e.target.closest("#login-section") &&
+        !loginSection.classList.contains("hidden")
+      ) {
+        loginSection.classList.toggle("hidden");
+        welcome.classList.toggle("blur");
+      }
+    });
+  })
+);
 
 // nav sticky
 const obs = new IntersectionObserver(
@@ -57,3 +79,16 @@ const obs = new IntersectionObserver(
   }
 );
 obs.observe(description);
+
+// section scroll into view
+links.forEach((link) =>
+  link.addEventListener("click", function (e) {
+    const hash = link.getAttribute("href");
+    if (hash.startsWith("#")) e.preventDefault();
+    if (hash.startsWith("#") && hash !== "#") {
+      document.querySelector(hash).scrollIntoView({
+        behavior: "smooth",
+      });
+    }
+  })
+);
