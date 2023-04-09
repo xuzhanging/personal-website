@@ -117,12 +117,26 @@
 
 .welcome {
   opacity: 0;
+  position: relative;
 }
 
 /* *************header*************** */
+.sticky {
+  position: fixed;
+  top: 0;
+  left: 0;
+  opacity: 0.9;
+}
+
+.sticky-margin-top {
+  margin-top: 9.6rem !important;
+}
+
 .welcome-header {
   padding: 2.4rem 4.8rem;
   display: flex;
+  width: 100%;
+  height: 9.6rem;
   justify-content: space-between;
   background-color: #f6f6f6;
 }
@@ -156,6 +170,7 @@
   font-size: 1.6rem;
   font-weight: 600;
   color: #444;
+  transition: all 0.5s;
 }
 
 .navigation a:hover {
@@ -213,18 +228,19 @@
   padding: 1.2rem 2.4rem;
   background-color: #00a9f2;
   color: #fff;
+  transition: all 0.5s;
 }
 
 .description .left .left-bottom .build-your-website:hover {
   background-color: #1c7ed6;
 }
 
-.description .left .left-bottom .about-moon {
+.description .left .left-bottom .learn-more {
   background-color: #fff;
   color: #555;
 }
 
-.description .left .left-bottom .about-moon:hover {
+.description .left .left-bottom .learn-more:hover {
   background-color: #f6f6f6;
 }
 
@@ -295,4 +311,26 @@
 .bolang3 {
   left: -6.7%;
   animation: bolang3 2s linear infinite alternate;
+}
+
+.about-moon {
+  margin: 0 auto;
+  padding-top: 9.6rem;
+  width: 130rem;
+}
+
+.about-moon h2 {
+  padding: 1.6rem 1.6rem;
+  font-size: 2rem;
+  color: #00a9f2;
+}
+
+.about-moon .details {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+}
+
+.details-img {
+  justify-self: center;
+  align-self: center;
 }
