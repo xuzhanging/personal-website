@@ -130,6 +130,7 @@
   top: 0;
   left: 0;
   opacity: 0.9;
+  z-index: 888;
 }
 
 .sticky-margin-top {
@@ -270,21 +271,21 @@ main {
 @keyframes bolang1 {
   to {
     left: 36.7%;
-    opacity: 0.8;
+    opacity: 0.9;
   }
 }
 
 @keyframes bolang2 {
   to {
     left: 76.4%;
-    opacity: 0.8;
+    opacity: 0.9;
   }
 }
 
 @keyframes bolang3 {
   to {
     left: -3%;
-    opacity: 0.8;
+    opacity: 0.9;
   }
 }
 
@@ -321,6 +322,7 @@ main {
 }
 
 .about-moon,
+.features,
 .features h2 {
   margin: 0 auto;
   padding-top: 9.6rem;
@@ -338,15 +340,33 @@ main {
 .about-moon .details {
   display: grid;
   grid-template-columns: 1fr 1fr;
+  justify-items: center;
+  align-items: center;
 }
 
-.details-img {
-  justify-self: center;
-  align-self: center;
+.about-moon .details p {
+  padding: 0 4.8rem;
+  font-size: 2rem;
+  color: #444;
+  line-height: 2.5;
 }
 
-.features {
-  padding-top: 9.6rem;
+.scroll-to-top {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  position: fixed;
+  right: 1rem;
+  bottom: 10rem;
+  width: 5rem;
+  height: 5rem;
+  border-radius: 10px;
+  background-color: #f6f6f6;
+  border: 1px solid #666;
+  font-weight: 700;
+  color: #444;
+  cursor: pointer;
 }
 
 .features h3 {
@@ -382,7 +402,7 @@ main {
 }
 
 .more-features {
-  padding: 2.4rem 0;
+  padding: 2.4rem 12.8rem 9.6rem;
   font-size: 2.4rem;
   color: #444;
   text-align: center;
@@ -399,5 +419,59 @@ main {
 
 /* *************footer*************** */
 footer {
-  padding-top: 9.6rem;
+  max-width: 130rem;
+  margin: 0 auto;
+  padding: 9.6rem 0 9.6rem;
+}
+
+footer ul {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+}
+
+footer ul li {
+  padding: 0 4.8rem;
+}
+
+footer ul li .footer-items {
+  display: grid;
+  grid-template-columns: 1fr;
+  row-gap: 2.4rem;
+}
+
+footer ul li .footer-items h3 {
+  height: 5rem;
+  padding-top: 1.5rem;
+  font-size: 2rem;
+  color: #333;
+}
+
+footer .iconfont {
+  font-size: 2.4rem !important;
+  color: #444;
+}
+
+footer .left span {
+  margin-right: 2rem;
+}
+
+footer .center .footer-icons div {
+  margin-bottom: 2rem;
+  display: flex;
+  align-items: center;
+  gap: 2rem;
+}
+
+footer .center .footer-icons address,
+footer .right .footer-icons {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+
+footer .center .footer-icons address a,
+footer .right .footer-icons a {
+  display: flex;
+  align-items: center;
+  gap: 2rem;
 }

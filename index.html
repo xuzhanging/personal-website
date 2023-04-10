@@ -15,12 +15,12 @@
     <script defer src="./src/js/index.js"></script>
   </head>
   <body>
-    <!-- 网页进入动画 -->
+    <!-- loading animation when enter website -->
     <section class="loading" id="loading-section">
       <div class="white-moon" id="white-moon"></div>
       <div class="black-moon" id="black-moon"></div>
     </section>
-    <!-- 登录注册 -->
+    <!-- login and register section -->
     <section class="login hidden" id="login-section">
       <form action="#" class="login-form">
         <label for="full-name">账号</label>
@@ -47,7 +47,7 @@
         <a href="" class="login-sign-up">没有账号？立即注册&rarr;</a>
       </form>
     </section>
-    <!-- 欢迎页面 -->
+    <!-- welcome page after loading animation -->
     <section class="welcome hidden" id="welcome-section">
       <header class="welcome-header" id="welcome-nav">
         <a href="./index.html" class="logo">
@@ -107,10 +107,12 @@
           <h2>About moon</h2>
           <div class="details">
             <div class="details-description-1">
-              Lorem ipsum dolor sit amet consectetur adipisicing elit.
-              Voluptates deserunt pariatur nemo nam quam, ea aliquid aliquam
-              amet quaerat cumque est enim, aspernatur qui dolor voluptate sed
-              architecto sit! Libero.
+              <p>
+                Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                Voluptates deserunt pariatur nemo nam quam, ea aliquid aliquam
+                amet quaerat cumque est enim, aspernatur qui dolor voluptate sed
+                architecto sit! Libero.
+              </p>
             </div>
             <div class="details-img details-img-1">
               <img src="./src/img/android-chrome-512x512.png" alt="" />
@@ -120,21 +122,29 @@
               <img src="./src/img/android-chrome-512x512.png" alt="" />
             </div>
             <div class="details-description-2">
-              Lorem ipsum dolor sit amet consectetur adipisicing elit. Quia
-              accusamus esse eveniet nobis hic voluptatum recusandae sit illo
-              quo. Quasi numquam possimus eveniet quis quidem debitis facilis
-              minima officia ex.
+              <p>
+                Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                Voluptates deserunt pariatur nemo nam quam, ea aliquid aliquam
+                amet quaerat cumque est enim, aspernatur qui dolor voluptate sed
+                architecto sit! Libero.
+              </p>
             </div>
 
             <div class="details-description-3">
-              Lorem ipsum dolor sit amet consectetur adipisicing elit. Provident
-              nobis delectus dolorum repudiandae cumque nihil dicta at, porro,
-              ratione beatae, doloribus nam pariatur ex necessitatibus modi
-              corporis? Debitis, enim quasi.
+              <p>
+                Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                Voluptates deserunt pariatur nemo nam quam, ea aliquid aliquam
+                amet quaerat cumque est enim, aspernatur qui dolor voluptate sed
+                architecto sit! Libero.
+              </p>
             </div>
             <div class="details-img details-img-3">
               <img src="./src/img/android-chrome-512x512.png" alt="" />
             </div>
+          </div>
+          <div class="scroll-to-top hidden" id="scroll-to-top">
+            <span>&UpArrow;</span>
+            <span>TOP</span>
           </div>
         </section>
         <section class="features" id="features">
@@ -168,12 +178,79 @@
             </li>
           </ul>
           <p class="more-features">
-            There are more interesting and fantastic functions waiting for
-            you,<a href="#" id="try-it-now">try it now&rarr;</a>
+            If you are interested in front-end development, you have come to
+            right place. You can share learing experience or discuss technology
+            with like-minded people. <br />If not, recording your daily life
+            maybe is also a good choice. <br />There are more interesting and
+            fantastic functions waiting for you,
+            <a href="#" id="try-it-now">try it now&rarr;</a>
           </p>
         </section>
       </main>
-      <footer></footer>
+      <footer>
+        <ul>
+          <li>
+            <div class="left footer-items">
+              <a href="./index.html" class="logo">
+                <img
+                  src="./src/img/favicon-32x32.png"
+                  alt="logo of this website, a blue moon"
+                />
+                <h1>Moon</h1>
+              </a>
+              <div class="footer-icons">
+                <span class="iconfont icon-tuite"></span>
+                <span class="iconfont icon-weixin"></span>
+                <span class="iconfont icon-QQ"></span>
+              </div>
+              <p class="copyright">
+                Copyright &copy; 2023 by Moon xuzhanging, Inc. All rights
+                reserved.
+              </p>
+            </div>
+          </li>
+          <li>
+            <div class="center footer-items">
+              <h3>Contact us</h3>
+              <div class="footer-icons">
+                <div>
+                  <span class="iconfont icon-dizhi"></span>
+                  <span>Liufang Campus of Wuhan Institute of Technology</span>
+                </div>
+                <address>
+                  <a href="mailto:2856602581@qq.com"
+                    ><span class="iconfont icon-youxiang"></span
+                    ><span>2856602581@qq.com</span></a
+                  >
+                  <a href="tel:+86 13409775311"
+                    ><span class="iconfont icon-24gf-telephone"></span
+                    ><span>+86 13409775311</span></a
+                  >
+                </address>
+                <!-- <span class="iconfont icon-24gf-telephone"></span>
+                <span class="iconfont icon-youxiang"></span> -->
+              </div>
+            </div>
+          </li>
+          <li>
+            <div class="right footer-items">
+              <h3>Account</h3>
+              <div class="footer-icons">
+                <!-- <span class="iconfont icon-denglu"></span>
+                <span class="iconfont icon-zhucetianjiahaoyou"></span> -->
+                <a href="#" id="footer-create-account"
+                  ><span class="iconfont icon-zhucetianjiahaoyou"></span
+                  ><span>Create Account</span></a
+                >
+                <a href="#" id="footer-sign-in"
+                  ><span class="iconfont icon-denglu"></span
+                  ><span>Sign in</span></a
+                >
+              </div>
+            </div>
+          </li>
+        </ul>
+      </footer>
     </section>
   </body>
 </html>

@@ -6,6 +6,13 @@
   "description": "",
   "glyphs": [
     {
+      "icon_id": "77156",
+      "name": "微信",
+      "font_class": "weixin",
+      "unicode": "f0106",
+      "unicode_decimal": 983302
+    },
+    {
       "icon_id": "783681",
       "name": "后期维护 维护 维护管理",
       "font_class": "houqiweihuweihuweihuguanli",
@@ -20,11 +27,25 @@
       "unicode_decimal": 58943
     },
     {
+      "icon_id": "1467351",
+      "name": "github",
+      "font_class": "github",
+      "unicode": "e691",
+      "unicode_decimal": 59025
+    },
+    {
       "icon_id": "1727406",
       "name": "46免费-线性",
       "font_class": "mianfei-xianxing",
       "unicode": "e8b1",
       "unicode_decimal": 59569
+    },
+    {
+      "icon_id": "1727462",
+      "name": "227注册、添加好友",
+      "font_class": "zhucetianjiahaoyou",
+      "unicode": "e8ca",
+      "unicode_decimal": 59594
     },
     {
       "icon_id": "2953960",
@@ -34,11 +55,39 @@
       "unicode_decimal": 59205
     },
     {
+      "icon_id": "4936984",
+      "name": "QQ",
+      "font_class": "QQ",
+      "unicode": "e882",
+      "unicode_decimal": 59522
+    },
+    {
+      "icon_id": "7140587",
+      "name": "邮箱",
+      "font_class": "youxiang",
+      "unicode": "e645",
+      "unicode_decimal": 58949
+    },
+    {
+      "icon_id": "7568886",
+      "name": "24gf-telephone",
+      "font_class": "24gf-telephone",
+      "unicode": "e96c",
+      "unicode_decimal": 59756
+    },
+    {
       "icon_id": "11399584",
       "name": "简单模型",
       "font_class": "jiandanmoxing",
       "unicode": "e639",
       "unicode_decimal": 58937
+    },
+    {
+      "icon_id": "11776580",
+      "name": "登录",
+      "font_class": "denglu",
+      "unicode": "e611",
+      "unicode_decimal": 58897
     },
     {
       "icon_id": "11891759",
@@ -53,6 +102,20 @@
       "font_class": "gengxin",
       "unicode": "e74b",
       "unicode_decimal": 59211
+    },
+    {
+      "icon_id": "15722707",
+      "name": "地址",
+      "font_class": "dizhi",
+      "unicode": "e609",
+      "unicode_decimal": 58889
+    },
+    {
+      "icon_id": "27402571",
+      "name": "推特",
+      "font_class": "tuite",
+      "unicode": "ee49",
+      "unicode_decimal": 61001
     },
     {
       "icon_id": "29265290",

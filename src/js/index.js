@@ -15,6 +15,7 @@ const welcome = document.querySelector("#welcome-section");
 const welcomeNav = document.querySelector("#welcome-nav");
 const navLogin = document.querySelector("#navigation-login");
 const description = document.querySelector("#main-description");
+const scrollToTop = document.querySelector("#scroll-to-top");
 
 // select all links
 const links = document.querySelectorAll("a:link");
@@ -22,6 +23,10 @@ const links = document.querySelectorAll("a:link");
 // select open login links
 const buildNow = document.querySelector("#build-your-website");
 const tryNow = document.querySelector("#try-it-now");
+
+// select footer links
+const footerCreateAccount = document.querySelector("#footer-create-account");
+const footerLogin = document.querySelector("#footer-sign-in");
 
 // loading animation finished, then loading section fade out.
 blackMoon.addEventListener("animationend", function () {
@@ -38,7 +43,7 @@ setTimeout(function () {
 }, 11000);
 
 // login button
-const loginBtn = [navLogin, buildNow, tryNow];
+const loginBtn = [navLogin, buildNow, tryNow, footerCreateAccount, footerLogin];
 loginBtn.forEach((login) =>
   login.addEventListener("click", function (e) {
     e.preventDefault();
@@ -58,17 +63,25 @@ loginBtn.forEach((login) =>
   })
 );
 
-// nav sticky
+// nav sticky and scroll-to-top sticky
+let scroll_to_top = false;
 const obs = new IntersectionObserver(
   function (entries) {
     const ent = entries[0];
     if (ent.isIntersecting === false) {
       welcomeNav.classList.add("sticky");
       description.classList.add("sticky-margin-top");
+      scrollToTop.classList.remove("hidden");
+      scrollToTop.classList.add("scroll-to-top");
+      scroll_to_top = true;
     }
     if (ent.isIntersecting === true) {
       welcomeNav.classList.remove("sticky");
       description.classList.remove("sticky-margin-top");
+      if (scroll_to_top) {
+        scrollToTop.classList.toggle("hidden");
+        scrollToTop.classList.remove("scroll-to-top");
+      }
     }
   },
   {
@@ -92,3 +105,11 @@ links.forEach((link) =>
     }
   })
 );
+
+// scroll to top
+scrollToTop.addEventListener("click", function () {
+  window.scrollTo({
+    top: 0,
+    behavior: "smooth",
+  });
+});
