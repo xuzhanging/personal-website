@@ -169,6 +169,8 @@
 .welcome {
   opacity: 0;
   position: relative;
+  margin: 0 auto;
+  max-width: 130rem;
 }
 
 /* *************header*************** */
