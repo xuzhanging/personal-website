@@ -67,27 +67,71 @@
     **********login section css*********
     ************************************ 
 */
-.login {
+.login,
+.sign-up {
   position: fixed;
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
   width: 40rem;
   padding: 2.4rem;
-  background-color: skyblue;
+  background-color: #fff;
   border: 1px solid #666;
   border-radius: 15px;
   transition: all 0.5s;
   z-index: 999;
 }
 
-.login-form {
+.login-form,
+.sign-up-form {
   display: flex;
   flex-direction: column;
   row-gap: 1.2rem;
 }
 
-.btn-login {
+.input-username,
+.input-password,
+.input-email {
+  padding: 0.8rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-radius: 10px;
+  border: 1px solid grey;
+}
+
+.input-username input,
+.input-email input {
+  width: 100%;
+}
+
+.input-username input,
+.input-email input,
+.input-password input {
+  border: none;
+}
+
+.input-password div {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 0.8rem;
+}
+
+.input-password div span {
+  cursor: pointer;
+}
+
+.input-password div a {
+  color: #00a9f2;
+}
+
+.input-password div a:hover {
+  color: #1c7ed6;
+}
+
+.btn-login,
+.btn-sign-up {
   display: inline-block;
   padding: 0.8rem;
   border-radius: 10px;
@@ -96,15 +140,18 @@
   text-align: center;
 }
 
-.btn-login:hover {
+.btn-login:hover,
+.btn-sign-up:hover {
   background-color: #4dabf7;
 }
 
-.login-sign-up {
+.login-sign-up,
+.sign-up-login {
   text-align: center;
 }
 
-.login-sign-up:hover {
+.login-sign-up:hover,
+.sign-up-login:hover {
   text-decoration: underline;
 }
 

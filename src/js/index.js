@@ -8,7 +8,17 @@ const whiteMoon = document.querySelector("#white-moon");
 // select login section elements
 const loginSection = document.querySelector("#login-section");
 const inputFullName = document.querySelector("#full-name");
+const loginInputPassword = document.querySelector("#login-password");
+const eyes = document.querySelectorAll("#eye");
+const forgotPassword = document.querySelector("#forgot-password");
 const btnLogin = document.querySelector("#btn-login");
+const loginSignup = document.querySelector("#login-sign-up");
+
+// select sign up section elements
+const signupSection = document.querySelector("#sign-up-section");
+const inputMail = document.querySelector("#email");
+const signupInputPassword = document.querySelector("#signup-password");
+const signupLogin = document.querySelector("#sign-up-login");
 
 // select welcome section elements
 const welcome = document.querySelector("#welcome-section");
@@ -62,6 +72,49 @@ loginBtn.forEach((login) =>
     });
   })
 );
+
+// display or hidden password
+eyes.forEach((eye) => {
+  eye.addEventListener("click", function (e) {
+    e.stopPropagation();
+    eye.classList.toggle("icon-yanjing_bi");
+    eye.classList.toggle("icon-yanjing_kai");
+    if (eye.classList.contains("icon-yanjing_bi")) {
+      this.parentElement.previousElementSibling.type = "password";
+    } else {
+      this.parentElement.previousElementSibling.type = "text";
+    }
+  });
+});
+
+// forgot password
+forgotPassword.addEventListener("click", function (e) {
+  e.preventDefault();
+  e.stopPropagation();
+  // TODO
+});
+
+// sign up in login section
+loginSignup.addEventListener("click", function (e) {
+  e.preventDefault();
+  e.stopPropagation();
+  inputFullName.value = "";
+  loginInputPassword.value = "";
+  loginSection.classList.toggle("hidden");
+  signupSection.classList.toggle("hidden");
+  inputMail.focus();
+});
+
+// log in in sign section
+signupLogin.addEventListener("click", function (e) {
+  e.preventDefault();
+  e.stopPropagation();
+  inputMail.value = "";
+  signupInputPassword.value = "";
+  signupSection.classList.toggle("hidden");
+  loginSection.classList.toggle("hidden");
+  inputFullName.focus();
+});
 
 // nav sticky and scroll-to-top sticky
 let scroll_to_top = false;

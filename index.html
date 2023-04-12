@@ -20,33 +20,94 @@
       <div class="white-moon" id="white-moon"></div>
       <div class="black-moon" id="black-moon"></div>
     </section>
-    <!-- login and register section -->
+    <!-- login section -->
     <section class="login hidden" id="login-section">
       <form action="#" class="login-form">
-        <label for="full-name">账号</label>
-        <input
-          type="text"
-          id="full-name"
-          name="userName"
-          class="login-full-name"
-          placeholder="输入您的账号"
-          required
-        />
-        <label for="password">密码</label>
-        <input
+        <label for="full-name">Email Address or Username</label>
+        <div class="input-username">
+          <input
+            type="text"
+            id="full-name"
+            name="userName"
+            class="login-full-name"
+            placeholder="Enter your email address or username"
+            required
+          />
+        </div>
+        <label for="login-password">Password</label>
+        <!-- <input
           type="password"
           id="password"
           name="userPassword"
           class="login-password"
-          placeholder="输入您的密码"
+          placeholder="Enter your password"
           required
-        />
+        /> -->
+        <div class="input-password">
+          <input
+            type="password"
+            id="login-password"
+            name="userPassword"
+            class="login-password"
+            placeholder="Enter your password"
+            required
+          />
+          <div>
+            <span class="iconfont icon-yanjing_bi" id="eye"></span>
+            <a href="#" class="forgot-password" id="forgot-password"
+              >Forgot password?</a
+            >
+          </div>
+        </div>
         <a href="./src/html/personal.html" class="btn-login" id="btn-login"
-          >登录</a
+          >Log in</a
         >
-        <a href="" class="login-sign-up">没有账号？立即注册&rarr;</a>
+        <a href="#" class="login-sign-up" id="login-sign-up"
+          >Don't have an account? Sign up&rarr;</a
+        >
       </form>
     </section>
+
+    <!-- forgot password -->
+    <!-- TODO -->
+
+    <!-- register section -->
+    <section class="sign-up hidden" id="sign-up-section">
+      <form action="#" class="sign-up-form">
+        <label for="email">Email Address</label>
+        <div class="input-email">
+          <input
+            type="text"
+            id="email"
+            name="email"
+            class="sign-up-email"
+            placeholder="Enter your email address"
+            required
+          />
+        </div>
+        <label for="signup-password">Password</label>
+        <div class="input-password">
+          <input
+            type="password"
+            id="signup-password"
+            name="userPassword"
+            class="sign-up-password"
+            placeholder="Enter your password"
+            required
+          />
+          <div>
+            <span class="iconfont icon-yanjing_bi" id="eye"></span>
+          </div>
+        </div>
+        <a href="./src/html/personal.html" class="btn-sign-up" id="btn-sign-up"
+          >Sign up</a
+        >
+        <a href="#" class="sign-up-login" id="sign-up-login"
+          >Already have an account? Log in&rarr;</a
+        >
+      </form>
+    </section>
+
     <!-- welcome page after loading animation -->
     <section class="welcome hidden" id="welcome-section">
       <header class="welcome-header" id="welcome-nav">

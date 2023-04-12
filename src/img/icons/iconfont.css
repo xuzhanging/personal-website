@@ -1,6 +1,6 @@
 @font-face {
   font-family: "iconfont"; /* Project id  */
-  src: url('iconfont.ttf?t=1681118102092') format('truetype');
+  src: url('iconfont.ttf?t=1681212624786') format('truetype');
 }
 
 .iconfont {
@@ -49,6 +49,14 @@
 
 .icon-24gf-telephone:before {
   content: "\e96c";
+}
+
+.icon-yanjing_kai:before {
+  content: "\e61b";
+}
+
+.icon-yanjing_bi:before {
+  content: "\e601";
 }
 
 .icon-jiandanmoxing:before {
