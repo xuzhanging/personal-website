@@ -19,6 +19,8 @@ body {
   font-family: sans-serif;
   /*for login section */
   position: relative;
+  max-width: 130rem;
+  margin: 0 auto;
 }
 
 a:link,
