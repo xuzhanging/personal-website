@@ -1,6 +1,6 @@
 @font-face {
   font-family: "iconfont"; /* Project id  */
-  src: url('iconfont.ttf?t=1681212624786') format('truetype');
+  src: url('iconfont.ttf?t=1681487976921') format('truetype');
 }
 
 .iconfont {
@@ -17,6 +17,10 @@
 
 .icon-houqiweihuweihuweihuguanli:before {
   content: "\e68d";
+}
+
+.icon-loading:before {
+  content: "\e644";
 }
 
 .icon-dui:before {

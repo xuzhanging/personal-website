@@ -1,0 +1,153 @@
+/* 
+    ****************************************
+    *******personal page loading css********
+    **************************************** 
+*/
+@keyframes personal-loading-opacity {
+  to {
+    opacity: 1;
+    filter: blur(0);
+  }
+}
+
+.personal-loading {
+  opacity: 0;
+  filter: blur(3px);
+  display: grid;
+  grid-template-columns: 1fr;
+  justify-items: center;
+  align-items: center;
+  width: 100%;
+  height: 100vh;
+  background-color: #f6f6f6;
+  overflow: hidden;
+  animation: personal-loading-opacity 5s linear forwards;
+}
+
+.personal-loading .welcome-p {
+  font-size: 2rem;
+  font-weight: 700;
+  color: #333;
+  text-transform: uppercase;
+}
+
+.center {
+  position: relative;
+  margin: 0 auto;
+  width: 25rem;
+  height: 25rem;
+  transform-style: preserve-3d;
+}
+
+@keyframes center-moon {
+  to {
+    box-shadow: 0 0 50px 10px #00a9f2;
+  }
+}
+
+@keyframes rotate-html {
+  to {
+    transform: translate(-50%, -50%) rotateX(60deg) rotateZ(360deg);
+  }
+}
+
+@keyframes rotate-css {
+  to {
+    transform: translate(-50%, -50%) rotateX(60deg) rotateY(-30deg)
+      rotateZ(360deg);
+  }
+}
+
+@keyframes rotate-js {
+  to {
+    transform: translate(-50%, -50%) rotateX(60deg) rotateY(-150deg)
+      rotateZ(360deg);
+  }
+}
+
+@keyframes track-line {
+  to {
+    box-shadow: 0 0 2px 2px #00a9f2;
+  }
+}
+
+@keyframes loading-icon {
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+.center-moon {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  width: 20rem;
+  height: 20rem;
+  border-radius: 50%;
+  overflow: hidden;
+  box-shadow: 0 0 1px 1px #74c0fc;
+  animation: center-moon 2s infinite alternate linear;
+}
+
+.center-moon img {
+  width: 100%;
+}
+
+.html,
+.css,
+.js {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  border: 1px solid grey;
+  border-radius: 50%;
+  font-size: 2rem;
+  transform-style: preserve-3d;
+}
+
+.html {
+  width: 25rem;
+  height: 25rem;
+  transform: translate(-50%, -50%) rotateX(60deg);
+  animation: rotate-html 6s infinite linear,
+    track-line 2s infinite linear alternate;
+}
+
+.css {
+  width: 30rem;
+  height: 30rem;
+  transform: translate(-50%, -50%) rotateX(60deg) rotateY(-30deg);
+  animation: rotate-css 5s infinite linear,
+    track-line 2s infinite linear alternate;
+}
+
+.js {
+  width: 35rem;
+  height: 35rem;
+  transform: translate(-50%, -50%) rotateX(60deg) rotateY(-150deg);
+  animation: rotate-js 5s infinite linear,
+    track-line 2s infinite linear alternate;
+}
+
+.html .text-html,
+.css .text-css {
+  color: #00a9f2;
+  transform: rotateX(-45deg);
+}
+
+.js .text-js {
+  color: #00a9f2;
+  transform: rotateY(180deg) rotateX(-45deg);
+}
+
+.personal-loading .loading-p {
+  font-size: 1.8rem;
+}
+
+.personal-loading .loading-p span {
+  display: inline-block;
+  font-size: 3rem !important;
+  margin-right: 10px;
+  animation: loading-icon 2s linear infinite;
+}

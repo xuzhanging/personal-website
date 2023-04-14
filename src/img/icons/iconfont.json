@@ -20,6 +20,13 @@
       "unicode_decimal": 59021
     },
     {
+      "icon_id": "1305488",
+      "name": "loading",
+      "font_class": "loading",
+      "unicode": "e644",
+      "unicode_decimal": 58948
+    },
+    {
       "icon_id": "1311981",
       "name": "对",
       "font_class": "dui",
