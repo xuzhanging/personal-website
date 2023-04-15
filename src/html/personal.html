@@ -14,7 +14,8 @@
     <script defer src="../js/personal.js"></script>
   </head>
   <body>
-    <section class="personal-loading">
+    <!-- personal page loading section -->
+    <section class="personal-loading" id="personal-loading">
       <p class="welcome-p">
         welcome to the world built with HTML、CSS and JavaScript (^_^)~~
       </p>
@@ -29,6 +30,54 @@
       <p class="loading-p">
         <span class="iconfont icon-loading"></span>loading...
       </p>
+    </section>
+    <!-- personal page -->
+    <section class="personal-page hidden" id="personal-page">
+      <header class="personal-page-header">
+        <ul class="header-left">
+          <li>
+            <a href="./personal.html" class="personal-page-header-logo">
+              <img src="../img/favicon-32x32.png" alt="blue moon" />
+              <span>Moon</span>
+            </a>
+          </li>
+          <li>
+            <p class="header-time" id="header-time">
+              hi~ 今天是2023年04月15日 星期六 下午16:52
+            </p>
+          </li>
+        </ul>
+        <ul class="header-center">
+          <li>
+            <input type="text" class="header-input-search" />
+            <span class="iconfont icon-sousuo header-search-icon"></span>
+          </li>
+        </ul>
+        <ul class="header-right">
+          <li class="user-head">
+            <img src="../img/favicon-32x32.png" alt="" />
+          </li>
+          <li class="have-icon">
+            <a href=""
+              ><span class="iconfont icon-xiaoxi"></span>
+              <p>消息</p></a
+            >
+          </li>
+          <li class="have-icon">
+            <a href=""
+              ><span class="iconfont icon-wodedongtai"></span>
+              <p>动态</p></a
+            >
+          </li>
+          <li class="have-icon">
+            <a href=""
+              ><span class="iconfont icon-shoucang"></span>
+              <p>收藏</p></a
+            >
+          </li>
+          <li class="publish"><a href="">publish</a></li>
+        </ul>
+      </header>
     </section>
   </body>
 </html>

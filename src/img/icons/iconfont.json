@@ -97,11 +97,32 @@
       "unicode_decimal": 58881
     },
     {
+      "icon_id": "11372701",
+      "name": "收藏",
+      "font_class": "shoucang",
+      "unicode": "e8b9",
+      "unicode_decimal": 59577
+    },
+    {
       "icon_id": "11399584",
       "name": "简单模型",
       "font_class": "jiandanmoxing",
       "unicode": "e639",
       "unicode_decimal": 58937
+    },
+    {
+      "icon_id": "11594403",
+      "name": "消息",
+      "font_class": "xiaoxi",
+      "unicode": "e6b4",
+      "unicode_decimal": 59060
+    },
+    {
+      "icon_id": "11641883",
+      "name": "搜索",
+      "font_class": "sousuo",
+      "unicode": "e622",
+      "unicode_decimal": 58914
     },
     {
       "icon_id": "11776580",
@@ -130,6 +151,13 @@
       "font_class": "dizhi",
       "unicode": "e609",
       "unicode_decimal": 58889
+    },
+    {
+      "icon_id": "15880216",
+      "name": "我的动态",
+      "font_class": "wodedongtai",
+      "unicode": "e69d",
+      "unicode_decimal": 59037
     },
     {
       "icon_id": "27402571",
