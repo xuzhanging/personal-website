@@ -166,6 +166,7 @@
 .personal-page {
   margin: 0 auto;
   max-width: 130rem;
+  border: 1px solid grey;
   opacity: 0;
 }
 
@@ -176,6 +177,7 @@
   padding: 1.2rem 1.2rem;
   width: 100%;
   /* border: 1px solid #00a9f2; */
+  /* background-color: orange; */
 }
 
 .header-left,
@@ -238,11 +240,16 @@
   border: 1px solid grey;
   border-radius: 50%;
   overflow: hidden;
+  transition: all 0.5s;
 }
 
 .user-head img {
   width: 100%;
   cursor: pointer;
+}
+
+.user-head:hover {
+  transform: scale(1.2);
 }
 
 .have-icon a {
@@ -257,6 +264,11 @@
   color: #00a9f2;
 }
 
+.have-icon a span,
+.have-icon a p {
+  transition: all 0.5s;
+}
+
 .have-icon a span {
   font-size: 2rem !important;
 }
@@ -268,8 +280,91 @@
   border-radius: 10px;
   text-align: center;
   line-height: 3;
+  transition: all 0.5s;
 }
 
 .publish:hover {
   background-color: #228be6;
+}
+
+/* ***************main************** */
+.personal-page-main {
+  display: grid;
+  grid-template-columns: 2fr 1fr 1fr;
+}
+/* banner */
+.banner {
+  position: relative;
+  width: 65rem;
+  height: 36.6rem;
+  background-color: skyblue;
+  overflow: hidden;
+}
+
+.banner img {
+  width: 65rem;
+}
+
+.banner ul {
+  position: absolute;
+  left: 0;
+  display: flex;
+}
+
+.banner .left,
+.banner .right {
+  position: absolute;
+  width: 2.5rem;
+  height: 2.5rem;
+  border-radius: 5px;
+  background-color: rgba(256, 256, 256, 0.2);
+  text-align: center;
+  line-height: 2.5rem;
+  font-size: 1.8rem;
+  cursor: pointer;
+  color: #fff;
+  transition: all 0.5s;
+}
+
+.banner .left:hover,
+.banner .right:hover {
+  background-color: rgba(256, 256, 256, 0.5);
+}
+
+.banner .left {
+  bottom: 3rem;
+  right: 6rem;
+}
+
+.banner .right {
+  bottom: 3rem;
+  right: 2rem;
+}
+
+.banner-ol {
+  position: absolute;
+  left: 2rem;
+  bottom: 1rem;
+  display: flex;
+  gap: 0.5rem;
+}
+
+.banner-ol li {
+  width: 2rem;
+  height: 2rem;
+  background-color: rgba(256, 256, 256, 0.2);
+  border-radius: 50%;
+  cursor: pointer;
+}
+
+.banner-ol-current-li {
+  background-color: rgba(256, 256, 256, 0.8) !important;
+}
+/* location */
+.location {
+  background-color: yellow;
+}
+/* weather */
+.weather {
+  background-color: yellowgreen;
 }
