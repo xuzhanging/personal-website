@@ -166,7 +166,7 @@
 .personal-page {
   margin: 0 auto;
   max-width: 130rem;
-  border: 1px solid grey;
+  border: 1px solid #f6f6f6;
   opacity: 0;
 }
 
@@ -292,12 +292,14 @@
   display: grid;
   grid-template-columns: 2fr 1fr 1fr;
 }
+
 /* banner */
 .banner {
   position: relative;
   width: 65rem;
   height: 36.6rem;
   background-color: skyblue;
+  border-radius: 10px;
   overflow: hidden;
 }
 
@@ -360,11 +362,76 @@
 .banner-ol-current-li {
   background-color: rgba(256, 256, 256, 0.8) !important;
 }
+
 /* location */
 .location {
-  background-color: yellow;
+  margin: 0 1rem;
+  border: 1px solid #aaa;
+  border-radius: 10px;
+  overflow: hidden;
 }
+
+.location span {
+  align-self: center;
+  font-size: 2rem;
+  font-weight: 600;
+  color: #333;
+}
+
+.location .map {
+  width: 100%;
+  height: 100%;
+  background-color: #228be6;
+}
+
 /* weather */
 .weather {
-  background-color: yellowgreen;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.location-detail {
+  flex: 2;
+  font-size: 1rem;
+  text-align: center;
+}
+
+.weather-detail {
+  flex: 8;
+}
+
+.weather ul {
+  width: 100%;
+  height: 100%;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-rows: 1fr 1fr 1fr;
+  justify-items: center;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.weather ul li {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  align-items: center;
+  width: 100%;
+  height: 100%;
+  border: 1px solid #aaa;
+  border-radius: 10px;
+}
+
+.weather ul li .property {
+  font-size: 1.6rem;
+}
+
+.weather ul li .value i {
+  font-size: 8rem !important;
+  color: #666;
+}
+
+.weather ul .weather-text .value {
+  font-size: 2rem;
 }
