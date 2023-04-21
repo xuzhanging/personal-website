@@ -366,6 +366,7 @@
 /* location */
 .location {
   margin: 0 1rem;
+  height: 36.6rem;
   border: 1px solid #aaa;
   border-radius: 10px;
   overflow: hidden;
@@ -388,7 +389,7 @@
 .weather {
   display: flex;
   flex-direction: column;
-  justify-content: space-between;
+  height: 36.6rem;
 }
 
 .location-detail {
@@ -434,4 +435,50 @@
 
 .weather ul .weather-text .value {
   font-size: 2rem;
+}
+
+.personal-page-aside {
+  margin-top: 1rem;
+  width: 100%;
+  /* border: 1px solid #00a9f2; */
+  /* border-radius: 10px; */
+}
+
+.to-do-list {
+  padding: 0.5rem;
+  width: 33%;
+  border: 1px solid #00a9f2;
+  border-radius: 10px;
+}
+
+.to-do-list-title {
+  display: flex;
+  align-items: center;
+}
+
+.to-do-input-label {
+  flex: 2;
+  font-size: 1.6rem;
+  font-weight: 600;
+  color: #555;
+}
+
+.to-do-input {
+  flex: 8;
+  border: none;
+}
+
+.to-do-list ol li,
+.to-do-list ul li {
+  padding: 0 0 1rem 1rem;
+  font-size: 1.6rem;
+}
+
+.to-do-list ol li:first-child,
+.to-do-list ul li:first-child {
+  padding-top: 1rem;
+}
+
+.to-do-list li input {
+  margin-right: 1rem;
 }

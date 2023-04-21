@@ -23,6 +23,12 @@ const locationMap = document.querySelector("#map");
 const weather = document.querySelector("#weather");
 const locationDetail = document.querySelector("#location-detail");
 const weatherDetail = document.querySelector("#weather-detail");
+// to do list
+const toDoInput = document.querySelector("#to-do-input");
+const toDoList = document.querySelector("#to-do-list");
+const doneList = document.querySelector("#done-list");
+const toDoCount = document.querySelector("#to-do-count");
+const doneCount = document.querySelector("#done-count");
 
 // personal page loading animation finished after 10s, then personal page loading fade out and hidden,personal page fade in
 personalLoadingSection.addEventListener("animationend", function () {
@@ -168,6 +174,7 @@ const initPersonalPage = function () {
   // get current position
   let latitude = null;
   let longitude = null;
+  if (!navigator.geolocation) return alert(`Can't use navigator.geolocation`);
   navigator.geolocation.getCurrentPosition(
     // get position success
     function (position) {
@@ -190,6 +197,50 @@ const initPersonalPage = function () {
       alert(`Can't get the position, please try again`);
     }
   );
+
+  // to do list
+  renderToDoList("toDoList");
+  toDoInput.addEventListener("keydown", function (e) {
+    if (e.keyCode === 13) {
+      if (toDoInput.value.trim() === "") {
+        alert("Please input valid content!");
+      } else {
+        let dataArr = getFromLocalStorage("toDoList");
+        dataArr.push({
+          title: toDoInput.value.trim(),
+          isDone: false,
+        });
+        saveToLocalStorage(dataArr);
+        renderToDoList("toDoList");
+        toDoInput.value = "";
+      }
+    }
+  });
+  [toDoList, doneList].forEach((ele) => {
+    ele.addEventListener("click", function (e) {
+      if (
+        e.target ===
+        this.querySelectorAll("li")[
+          e.target.closest("li").getAttribute("index")
+        ].querySelector("input")
+      ) {
+        let dataArr = getFromLocalStorage("toDoList");
+        dataArr[e.target.getAttribute("index")].isDone = e.target.checked;
+        saveToLocalStorage(dataArr);
+        renderToDoList("toDoList");
+      } else if (
+        e.target ===
+        this.querySelectorAll("li")[
+          e.target.closest("li").getAttribute("index")
+        ].querySelector("a")
+      ) {
+        let dataArr = getFromLocalStorage("toDoList");
+        dataArr.splice(e.target.getAttribute("index"), 1);
+        saveToLocalStorage(dataArr);
+        renderToDoList("toDoList");
+      }
+    });
+  });
 };
 
 const getWeatherData = async function (longitude, latitude) {
@@ -259,6 +310,48 @@ const getWeatherData = async function (longitude, latitude) {
   } catch (err) {
     weather.textContent = err.message;
   }
+};
+
+const saveToLocalStorage = function (data) {
+  localStorage.setItem("toDoList", JSON.stringify(data));
+};
+
+const getFromLocalStorage = function (key) {
+  const localStorageData = localStorage.getItem(key);
+  if (localStorageData !== null) {
+    return JSON.parse(localStorageData);
+  } else {
+    return [];
+  }
+};
+
+const renderToDoList = function (key) {
+  const dataArr = getFromLocalStorage(key);
+  toDoList.textContent = "";
+  doneList.textContent = "";
+  let toDoCounts = 0;
+  let doneCounts = 0;
+  dataArr.forEach((data, index) => {
+    if (data.isDone) {
+      doneCounts++;
+      const ulHTML = `<li index='${
+        doneCounts - 1
+      }'><input type='checkbox' checked='checked' index='${index}'><span>${
+        data.title
+      }</span><a href='javascript:;' index='${index}'>×</a></li>`;
+      doneList.insertAdjacentHTML("beforeend", ulHTML);
+    } else {
+      toDoCounts++;
+      const olHTML = `<li index='${
+        toDoCounts - 1
+      }'><input type='checkbox' index='${index}'><span>${
+        data.title
+      }</span><a href='javascript:;' index='${index}'>×</a></li>`;
+      toDoList.insertAdjacentHTML("beforeend", olHTML);
+    }
+  });
+  toDoCount.textContent = toDoCounts;
+  doneCount.textContent = doneCounts;
 };
 
 // initPersonalPage();
