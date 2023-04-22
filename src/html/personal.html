@@ -123,38 +123,44 @@
           </ol>
         </div>
         <div class="location">
-          <!-- <span>current position</span> -->
+          <div class="location-detail" id="location-detail">
+            当前位置获取中...
+          </div>
+          <div class="location-gap"></div>
           <div class="map" id="map"></div>
         </div>
-        <div class="weather" id="weather">
-          <div class="location-detail" id="location-detail">数据加载中...</div>
+        <div class="right">
           <div class="weather-detail" id="weather-detail"></div>
+          <div class="right-gap"></div>
+          <div class="to-do-list-container">
+            <div class="to-do-list">
+              <div class="to-do-list-title">
+                <label for="to-do-input" class="to-do-input-label"
+                  >ToDoList</label
+                >
+                <input
+                  type="text"
+                  placeholder="点击添加ToDo"
+                  id="to-do-input"
+                  class="to-do-input"
+                />
+              </div>
+              <h2>
+                正在进行
+                <span id="to-do-count"></span>
+              </h2>
+              <ol id="to-do-list"></ol>
+              <h2>
+                已经完成
+                <span id="done-count"></span>
+              </h2>
+              <ul id="done-list"></ul>
+            </div>
+          </div>
         </div>
       </main>
       <!-- personal page aside -->
-      <aside class="personal-page-aside">
-        <div class="to-do-list">
-          <div class="to-do-list-title">
-            <label for="to-do-input" class="to-do-input-label">ToDoList</label>
-            <input
-              type="text"
-              placeholder="点击添加ToDo"
-              id="to-do-input"
-              class="to-do-input"
-            />
-          </div>
-          <h2>
-            正在进行
-            <span id="to-do-count"></span>
-          </h2>
-          <ol id="to-do-list"></ol>
-          <h2>
-            已经完成
-            <span id="done-count"></span>
-          </h2>
-          <ul id="done-list"></ul>
-        </div>
-      </aside>
+      <aside class="personal-page-aside"></aside>
     </section>
   </body>
 </html>

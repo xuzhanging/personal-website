@@ -365,44 +365,48 @@
 
 /* location */
 .location {
+  display: flex;
+  flex-direction: column;
   margin: 0 1rem;
   height: 36.6rem;
-  border: 1px solid #aaa;
-  border-radius: 10px;
-  overflow: hidden;
 }
 
-.location span {
-  align-self: center;
-  font-size: 2rem;
-  font-weight: 600;
-  color: #333;
+.location-detail {
+  flex: 0.6;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 1rem;
+  border: 1px solid #aaa;
+  border-radius: 10px;
+}
+
+.location-gap {
+  flex: 0.1;
 }
 
 .location .map {
-  width: 100%;
-  height: 100%;
-  background-color: #228be6;
+  flex: 9.3;
+  border: 1px solid #aaa;
+  border-radius: 10px;
 }
 
-/* weather */
-.weather {
+main .right {
   display: flex;
   flex-direction: column;
   height: 36.6rem;
 }
 
-.location-detail {
-  flex: 2;
-  font-size: 1rem;
-  text-align: center;
-}
-
+/* weather */
 .weather-detail {
-  flex: 8;
+  flex: 5;
 }
 
-.weather ul {
+.right-gap {
+  flex: 0.2;
+}
+
+.weather-detail ul {
   width: 100%;
   height: 100%;
   display: grid;
@@ -413,7 +417,7 @@
   gap: 0.5rem;
 }
 
-.weather ul li {
+.weather-detail ul li {
   display: flex;
   flex-direction: column;
   justify-content: space-evenly;
@@ -424,31 +428,34 @@
   border-radius: 10px;
 }
 
-.weather ul li .property {
+.weather-detail ul li .property {
+  font-size: 1.2rem;
+}
+
+.weather-detail ul li .value {
   font-size: 1.6rem;
 }
 
-.weather ul li .value i {
-  font-size: 8rem !important;
+.weather-detail ul li .value i {
+  font-size: 5.2rem !important;
   color: #666;
 }
 
-.weather ul .weather-text .value {
+.weather-detail ul .weather-text .value {
   font-size: 2rem;
 }
 
-.personal-page-aside {
-  margin-top: 1rem;
-  width: 100%;
-  /* border: 1px solid #00a9f2; */
-  /* border-radius: 10px; */
+/* to do list */
+.to-do-list-container {
+  flex: 4.8;
+  padding: 0.5rem;
+  border: 1px solid #aaa;
+  border-radius: 10px;
 }
 
 .to-do-list {
-  padding: 0.5rem;
-  width: 33%;
-  border: 1px solid #00a9f2;
-  border-radius: 10px;
+  height: 12rem;
+  overflow: scroll;
 }
 
 .to-do-list-title {
@@ -481,4 +488,11 @@
 
 .to-do-list li input {
   margin-right: 1rem;
+}
+
+.personal-page-aside {
+  margin-top: 1rem;
+  width: 100%;
+  /* border: 1px solid #00a9f2; */
+  /* border-radius: 10px; */
 }

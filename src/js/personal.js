@@ -18,10 +18,9 @@ const bannerOl = document.querySelector("#banner-ol");
 const bannerLeftBtn = document.querySelector("#banner-left-btn");
 const bannerRightBtn = document.querySelector("#banner-right-btn");
 // location
+const locationDetail = document.querySelector("#location-detail");
 const locationMap = document.querySelector("#map");
 // weather
-const weather = document.querySelector("#weather");
-const locationDetail = document.querySelector("#location-detail");
 const weatherDetail = document.querySelector("#weather-detail");
 // to do list
 const toDoInput = document.querySelector("#to-do-input");
@@ -264,51 +263,49 @@ const getWeatherData = async function (longitude, latitude) {
         `Something wrong, can't get weather data, please try again!`
       );
     }
-    // console.log(dataLocation.location[0]);
-    // console.log(dataWeather);
-    const locationHTML = `您所在的位置：${dataLocation.location[0].country} ${dataLocation.location[0].adm1} ${dataLocation.location[0].adm2} ${dataLocation.location[0].name}`;
+    const locationHTML = `当前位置：${dataLocation.location[0].country} ${dataLocation.location[0].adm1} ${dataLocation.location[0].adm2} ${dataLocation.location[0].name}`;
     const weatherHTML = `
     <ul>
-    <li class="weather-temp">
-      <div class="property">温度</div>
-      <div class="value">${dataWeather.now.temp}℃</div>
-    </li>
-    <li class="weather-icon">
-      <div class="value"><i class="qi-${dataWeather.now.icon}"></i></div>
-    </li>
-    <li class="weather-text">
-      <div class="value">${dataWeather.now.text}</div>
-    </li>
-    <li class="weather-windDir">
-      <div class="property">风向</div>
-      <div class="value">${dataWeather.now.windDir}</div>
-    </li>
-    <li class="weather-windScale">
-      <div class="property">风力等级</div>
-      <div class="value">${dataWeather.now.windScale}</div>
-    </li>
-    <li class="weather-windSpeed">
-      <div class="property">风速</div>
-      <div class="value">${dataWeather.now.windSpeed}公里/小时</div>
-    </li>
-    <li class="weather-humidity">
-      <div class="property">相对湿度</div>
-      <div class="value">${dataWeather.now.humidity}</div>
-    </li>
-    <li class="weather-pressure">
-      <div class="property">气压</div>
-      <div class="value">${dataWeather.now.pressure}百帕</div>
-    </li>
-    <li class="weather-cloud">
-      <div class="property">云量</div>
-      <div class="value">${dataWeather.now.cloud}</div>
-    </li>
-  </ul>
-  `;
+      <li class="weather-icon">
+        <div class="value"><i class="qi-${dataWeather.now.icon}"></i></div>
+      </li>
+      <li class="weather-text">
+        <div class="value">${dataWeather.now.text}</div>
+      </li>
+      <li class="weather-temp">
+        <div class="property">温度</div>
+        <div class="value">${dataWeather.now.temp}℃</div>
+      </li>
+      <li class="weather-windDir">
+        <div class="property">风向</div>
+        <div class="value">${dataWeather.now.windDir}</div>
+      </li>
+      <li class="weather-windScale">
+        <div class="property">风力等级</div>
+        <div class="value">${dataWeather.now.windScale}</div>
+      </li>
+      <li class="weather-windSpeed">
+        <div class="property">风速</div>
+        <div class="value">${dataWeather.now.windSpeed}公里/小时</div>
+      </li>
+      <li class="weather-humidity">
+        <div class="property">相对湿度</div>
+        <div class="value">${dataWeather.now.humidity}%</div>
+      </li>
+      <li class="weather-cloud">
+        <div class="property">云量</div>
+        <div class="value">${dataWeather.now.cloud}</div>
+      </li>
+      <li class="weather-pressure">
+        <div class="property">气压</div>
+        <div class="value">${dataWeather.now.pressure}百帕</div>
+      </li>
+    </ul>
+    `;
     locationDetail.textContent = locationHTML;
     weatherDetail.insertAdjacentHTML("afterbegin", weatherHTML);
   } catch (err) {
-    weather.textContent = err.message;
+    weatherDetail.textContent = err.message;
   }
 };
 
