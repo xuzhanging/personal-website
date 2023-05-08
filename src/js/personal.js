@@ -9,9 +9,11 @@ const personalLoadingSection = document.querySelector("#personal-loading");
 const personalPage = document.querySelector("#personal-page");
 
 // select personal page header elements
+const personalPageHeader = document.querySelector("#personal-page-header");
 const headerTime = document.querySelector("#header-time");
 
 // select personal page main section elements
+const personalPageMain = document.querySelector("#personal-page-main");
 // banner
 const bannerUl = document.querySelector("#banner-ul");
 const bannerOl = document.querySelector("#banner-ol");
@@ -240,6 +242,28 @@ const initPersonalPage = function () {
       }
     });
   });
+
+  // personal page header sticky
+  const obs = new IntersectionObserver(
+    function (entries) {
+      const ent = entries[0];
+      if (ent.isIntersecting === false) {
+        personalPageHeader.classList.add("sticky");
+        personalPageMain.classList.add("sticky-margin-top");
+      }
+      if (ent.isIntersecting === true) {
+        personalPageHeader.classList.remove("sticky");
+        personalPageMain.classList.remove("sticky-margin-top");
+      }
+    },
+    {
+      // In the viewport
+      root: null,
+      threshold: 0,
+      rootMargin: "-18px",
+    }
+  );
+  obs.observe(personalPageMain);
 };
 
 const getWeatherData = async function (longitude, latitude) {
@@ -351,4 +375,4 @@ const renderToDoList = function (key) {
   doneCount.textContent = doneCounts;
 };
 
-// initPersonalPage();
+initPersonalPage();

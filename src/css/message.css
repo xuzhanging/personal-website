@@ -1,0 +1,139 @@
+.message {
+  margin: 0 auto;
+  max-width: 130rem;
+}
+
+.personal-page-header {
+  display: flex;
+  justify-content: space-between;
+  padding: 1.2rem 1.2rem;
+  width: 130rem;
+  background-color: #f6f6f6;
+}
+
+.header-left,
+.header-right {
+  flex: 2;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.personal-page-header-logo {
+  display: flex;
+  align-items: center;
+}
+
+.personal-page-header-logo span {
+  color: #00a9f2;
+  font-size: 2rem;
+  font-weight: 600;
+}
+
+.header-time {
+  font-size: 1.4rem;
+}
+
+.header-center {
+  flex: 1;
+  margin: 0 4.8rem;
+  display: flex;
+  align-items: center;
+}
+
+.header-center li {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  padding: 0 0.8rem;
+  border: 1px solid #00a9f2;
+  border-radius: 10px;
+}
+
+.header-input-search {
+  flex: 9;
+  border: none;
+  height: 35px;
+}
+
+.header-search-icon {
+  flex: 1;
+  cursor: pointer;
+}
+
+.header-right {
+  font-size: 1.4rem;
+}
+
+.user-head {
+  width: 6rem;
+  height: 6rem;
+  background-color: skyblue;
+  border: 1px solid grey;
+  border-radius: 50%;
+  overflow: hidden;
+  transition: all 0.5s;
+}
+
+.user-head img {
+  width: 100%;
+  cursor: pointer;
+}
+
+.user-head:hover {
+  transform: scale(1.2);
+}
+
+.have-icon a {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.have-icon a:hover span,
+.have-icon a:hover p {
+  color: #00a9f2;
+}
+
+.have-icon a span,
+.have-icon a p {
+  transition: all 0.5s;
+}
+
+.have-icon a span {
+  font-size: 2rem !important;
+}
+
+.publish {
+  width: 8rem;
+  height: 4rem;
+  background-color: #00a9f2;
+  border-radius: 10px;
+  text-align: center;
+  line-height: 3;
+  transition: all 0.5s;
+}
+
+.publish:hover {
+  background-color: #228be6;
+}
+
+.my-message {
+  margin: 0 auto;
+  padding: 2rem;
+  width: 70%;
+  border: 1px solid #00a9f2;
+  border-radius: 10px;
+}
+
+.my-message-title {
+  font-size: 1.6rem;
+  font-weight: 700;
+  color: #00a9f2;
+}
+
+.my-message-item {
+  margin-top: 2rem;
+  border-bottom: 1px dashed #00a9f2;
+}

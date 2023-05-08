@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>publish</title>
+    <link rel="shortcut icon" href="../img/favicon.ico" type="image/x-icon" />
+    <link rel="apple-touch-icon" href="../img/apple-touch-icon.png" />
+    <link rel="manifest" href="../../manifest.webmanifest" />
+    <link rel="stylesheet" href="../css/default.css" />
+    <link rel="stylesheet" href="../css/publish.css" />
+    <link rel="stylesheet" href="../img/icons/iconfont.css" />
+    <script defer src="../js/publish.js"></script>
+  </head>
+  <body>
+    <section class="publish-section">
+      <header class="personal-page-header" id="personal-page-header">
+        <ul class="header-left">
+          <li>
+            <a href="./personal.html" class="personal-page-header-logo">
+              <img src="../img/favicon-32x32.png" alt="blue moon" />
+              <span>Moon</span>
+            </a>
+          </li>
+          <li>
+            <p class="header-time" id="header-time"></p>
+          </li>
+        </ul>
+        <ul class="header-center">
+          <li>
+            <input type="text" class="header-input-search" />
+            <span class="iconfont icon-sousuo header-search-icon"></span>
+          </li>
+        </ul>
+        <ul class="header-right">
+          <li class="user-head">
+            <img src="../img/favicon-32x32.png" alt="" />
+          </li>
+          <li class="have-icon">
+            <a href="./message.html" target="_blank"
+              ><span class="iconfont icon-xiaoxi"></span>
+              <p>message</p></a
+            >
+          </li>
+          <li class="have-icon">
+            <a href="./moments.html" target="_blank"
+              ><span class="iconfont icon-wodedongtai"></span>
+              <p>moments</p></a
+            >
+          </li>
+          <li class="have-icon">
+            <a href="./favorites.html" target="_blank"
+              ><span class="iconfont icon-shoucang"></span>
+              <p>favorites</p></a
+            >
+          </li>
+          <li class="publish"><a href="">publish</a></li>
+        </ul>
+      </header>
+      <main class="my-publish">
+        <label for="publish-title">标题<br /></label
+        ><input type="text" id="publish-title" class="publish-title" />
+        <br />
+        <label for="pulish-main">内容<br /></label
+        ><textarea
+          name=""
+          id="publish-main"
+          cols="30"
+          rows="10"
+          class="publish-main"
+        ></textarea>
+        <button>pulish</button>
+      </main>
+    </section>
+  </body>
+</html>

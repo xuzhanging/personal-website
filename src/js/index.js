@@ -18,6 +18,7 @@ const loginSignup = document.querySelector("#login-sign-up");
 const signupSection = document.querySelector("#sign-up-section");
 const inputMail = document.querySelector("#email");
 const signupInputPassword = document.querySelector("#signup-password");
+const btnSignUp = document.querySelector("#btn-sign-up");
 const signupLogin = document.querySelector("#sign-up-login");
 
 // select welcome section elements
@@ -52,6 +53,63 @@ setTimeout(function () {
   welcome.style.animation = "welcome-fade-in 2s linear forwards";
 }, 11000);
 
+// TO DELETE
+// loading.style.display = "none";
+// welcome.classList.toggle("hidden");
+// welcome.style.animation = "welcome-fade-in 1s linear forwards";
+
+// login fetch function
+const loginFetch = async function (url, username, password) {
+  try {
+    const res = await fetch(url, {
+      method: "POST",
+      headers: {
+        "Content-Type": "application/json",
+      },
+      body: JSON.stringify({
+        email: username,
+        password: password,
+      }),
+    });
+    const data = await res.json();
+    console.log(data);
+    if (data.status === 1) {
+      throw new Error(data.message);
+    }
+    if (data.status === 0) {
+      window.open("./src/html/personal.html");
+    }
+  } catch (err) {
+    alert(err.message);
+  }
+};
+
+// register fetch function
+const registerFetch = async function (url, email, password) {
+  try {
+    const res = await fetch(url, {
+      method: "POST",
+      headers: {
+        "Content-Type": "application/json",
+      },
+      body: JSON.stringify({
+        email: email,
+        password: password,
+      }),
+    });
+    const data = await res.json();
+    console.log(data);
+    if (data.status === 1) {
+      throw new Error(data.message);
+    }
+    if (data.status === 0) {
+      window.open("./src/html/personal.html");
+    }
+  } catch (err) {
+    alert(err.message);
+  }
+};
+
 // login button
 const loginBtn = [navLogin, buildNow, tryNow, footerCreateAccount, footerLogin];
 loginBtn.forEach((login) =>
@@ -73,6 +131,28 @@ loginBtn.forEach((login) =>
   })
 );
 
+// send login request
+btnLogin.addEventListener("click", function (e) {
+  e.preventDefault();
+  e.stopPropagation();
+  loginFetch(
+    "http://127.0.0.1:3007/api/login",
+    inputFullName.value,
+    loginInputPassword.value
+  );
+});
+
+// send register request
+btnSignUp.addEventListener("click", function (e) {
+  e.preventDefault();
+  e.stopPropagation();
+  registerFetch(
+    "http://127.0.0.1:3007/api/register",
+    inputMail.value,
+    signupInputPassword.value
+  );
+});
+
 // display or hidden password
 eyes.forEach((eye) => {
   eye.addEventListener("click", function (e) {
@@ -87,12 +167,12 @@ eyes.forEach((eye) => {
   });
 });
 
-// forgot password
-forgotPassword.addEventListener("click", function (e) {
-  e.preventDefault();
-  e.stopPropagation();
-  // TODO
-});
+// // forgot password
+// forgotPassword.addEventListener("click", function (e) {
+//   e.preventDefault();
+//   e.stopPropagation();
+//   // TODO
+// });
 
 // sign up in login section
 loginSignup.addEventListener("click", function (e) {

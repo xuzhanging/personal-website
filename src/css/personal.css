@@ -175,7 +175,9 @@
   display: flex;
   justify-content: space-between;
   padding: 1.2rem 1.2rem;
-  width: 100%;
+  /* width: 100%; */
+  width: 130rem;
+  background-color: #f6f6f6;
   /* border: 1px solid #00a9f2; */
   /* background-color: orange; */
 }
@@ -227,6 +229,7 @@
 
 .header-search-icon {
   flex: 1;
+  cursor: pointer;
 }
 
 .header-right {
@@ -490,9 +493,95 @@ main .right {
   margin-right: 1rem;
 }
 
+/* personal page aside */
 .personal-page-aside {
-  margin-top: 1rem;
+  margin-top: 2rem;
+  margin-bottom: 1rem;
   width: 100%;
-  /* border: 1px solid #00a9f2; */
-  /* border-radius: 10px; */
+}
+
+.articles {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  gap: 2rem;
+  width: 100%;
+}
+
+.article-item {
+  height: 21rem;
+}
+
+.article-item .article-pic {
+  position: relative;
+}
+
+.article-hot {
+  position: absolute;
+  bottom: 3.5rem;
+  padding-left: 1rem;
+  display: flex;
+  gap: 1.5rem;
+  font-size: 1.6rem;
+  transition: all 0.5s;
+}
+
+.article-hot .renqi,
+.article-hot .pinglun {
+  display: flex;
+  align-items: center;
+  color: rgba(256, 256, 256, 0.9);
+}
+
+.article-hot .iconfont {
+  font-size: 2rem !important;
+}
+
+.img-container {
+  overflow: hidden;
+  border-radius: 10px;
+  margin-bottom: 0.5rem;
+  height: 16rem;
+}
+
+.article-item a img {
+  width: 100%;
+  transition: all 0.5s;
+}
+
+.article-item a img:hover {
+  transform: scale(1.1);
+}
+
+.article-pic .img-container:hover + .article-hot {
+  opacity: 0;
+}
+
+.article-item a p {
+  margin: 0 0 0.5rem;
+  padding: 0 0.3rem;
+  font-size: 1.6rem;
+  color: #000;
+}
+
+.article-item ol {
+  display: flex;
+  justify-content: space-between;
+}
+
+.article-author a,
+.article-time {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  color: #333;
+}
+
+.article-item ol li .iconfont {
+  font-weight: 700;
+}
+
+.article-item a p:hover,
+.article-author a:hover {
+  color: #00a9f2;
+  transition: all 0.5s;
 }

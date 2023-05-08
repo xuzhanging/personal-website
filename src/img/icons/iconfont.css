@@ -1,6 +1,8 @@
 @font-face {
-  font-family: "iconfont"; /* Project id  */
-  src: url('iconfont.ttf?t=1681556482752') format('truetype');
+  font-family: "iconfont"; /* Project id 4049532 */
+  src: url('iconfont.woff2?t=1683203866926') format('woff2'),
+       url('iconfont.woff?t=1683203866926') format('woff'),
+       url('iconfont.ttf?t=1683203866926') format('truetype');
 }
 
 .iconfont {
@@ -12,7 +14,11 @@
 }
 
 .icon-weixin:before {
-  content: "\f0106";
+  content: "\e600";
+}
+
+.icon-shijian:before {
+  content: "\e665";
 }
 
 .icon-houqiweihuweihuweihuguanli:before {
@@ -45,6 +51,14 @@
 
 .icon-QQ:before {
   content: "\e882";
+}
+
+.icon-zuozhe:before {
+  content: "\e65c";
+}
+
+.icon-pinglun:before {
+  content: "\e658";
 }
 
 .icon-youxiang:before {
@@ -97,6 +111,10 @@
 
 .icon-wodedongtai:before {
   content: "\e69d";
+}
+
+.icon-renqiredu:before {
+  content: "\e708";
 }
 
 .icon-tuite:before {
