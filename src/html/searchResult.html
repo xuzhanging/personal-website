@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>搜索结果</title>
+    <link rel="shortcut icon" href="../img/favicon.ico" type="image/x-icon" />
+    <link rel="apple-touch-icon" href="../img/apple-touch-icon.png" />
+    <link rel="manifest" href="../../manifest.webmanifest" />
+    <link
+      rel="stylesheet"
+      href="https://unpkg.com/leaflet@1.9.3/dist/leaflet.css"
+      integrity="sha256-kLaT2GOSpHechhsozzB+flnD+zUyjE2LlfWPgU04xyI="
+      crossorigin=""
+    />
+    <link rel="stylesheet" href="../css/default.css" />
+    <link rel="stylesheet" href="../css/searchResult.css" />
+    <link rel="stylesheet" href="../img/icons/iconfont.css" />
+    <script defer type="module" src="../js/searchResult.js"></script>
+  </head>
+  <body>
+    <section class="search-result">
+      <header class="personal-page-header" id="personal-page-header">
+        <ul class="header-left">
+          <li>
+            <a href="./personal.html" class="personal-page-header-logo">
+              <img src="../img/favicon-32x32.png" alt="blue moon" />
+              <span>Moon</span>
+            </a>
+          </li>
+          <li>
+            <p class="header-time" id="header-time"></p>
+          </li>
+        </ul>
+        <ul class="header-center">
+          <li>
+            <input type="text" class="header-input-search" id="header-input" />
+            <span
+              class="iconfont icon-sousuo header-search-icon"
+              id="header-search"
+            ></span>
+          </li>
+        </ul>
+        <ul class="header-right">
+          <li class="user-head">
+            <img src="../img/favicon-32x32.png" alt="" />
+          </li>
+          <!-- <li class="have-icon">
+            <a href="./message.html" target="_blank"
+              ><span class="iconfont icon-xiaoxi"></span>
+              <p>消息</p></a
+            >
+          </li>
+          <li class="have-icon">
+            <a href="./moments.html" target="_blank"
+              ><span class="iconfont icon-wodedongtai"></span>
+              <p>动态</p></a
+            >
+          </li> -->
+          <li class="have-icon">
+            <a href="./favorites.html" target="_blank"
+              ><span class="iconfont icon-shoucang"></span>
+              <p>收藏</p></a
+            >
+          </li>
+          <li class="publish">
+            <a href="./publish.html" target="_blank">发布</a>
+          </li>
+        </ul>
+      </header>
+      <main class="search-result-main">
+        <div class="search-result-main-top">
+          <p class="search-result-tip">hello的搜索结果</p>
+          <button class="order" id="order-article">按热度排序</button>
+        </div>
+        <ul class="articles" id="articles"></ul>
+      </main>
+    </section>
+  </body>
+</html>

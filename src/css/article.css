@@ -34,6 +34,10 @@
   font-size: 1.4rem;
 }
 
+.header-time span {
+  color: #00a9f2;
+}
+
 .header-center {
   flex: 1;
   margin: 0 4.8rem;
@@ -128,6 +132,10 @@
   margin-bottom: 2rem;
 }
 
+.article-comments {
+  position: relative;
+}
+
 .article-top {
   border-bottom: 1px solid rgba(0, 0, 256, 0.3);
 }
@@ -150,10 +158,15 @@
 }
 
 .article-favorite {
+  padding: 1rem;
+  display: flex;
+  align-items: center;
+  text-align: center;
   cursor: pointer;
   font-size: 1.6rem;
   color: #00a9f2;
   transition: all 0.5s;
+  border-radius: 10px;
 }
 
 .article-favorite:hover {
@@ -164,6 +177,7 @@
   padding: 2rem 2rem;
   font-size: 2rem;
   color: #222;
+  text-indent: 4rem;
 }
 
 .my-comment {
@@ -188,6 +202,19 @@
 }
 
 .publish-comment:hover {
+  background-color: #228be6;
+}
+
+.order-comments {
+  position: absolute;
+  right: 4rem;
+  top: 14rem;
+  background-color: #00a9f2;
+  border: none;
+  transition: all 0.5s;
+}
+
+.order-comments:hover {
   background-color: #228be6;
 }
 

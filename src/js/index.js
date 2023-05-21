@@ -72,11 +72,12 @@ const loginFetch = async function (url, username, password) {
       }),
     });
     const data = await res.json();
-    console.log(data);
     if (data.status === 1) {
       throw new Error(data.message);
     }
     if (data.status === 0) {
+      // login success, then store token into localStorage, jump to personal page
+      localStorage.setItem("currentToken", JSON.stringify(data.token));
       window.open("./src/html/personal.html");
     }
   } catch (err) {
@@ -103,7 +104,9 @@ const registerFetch = async function (url, email, password) {
       throw new Error(data.message);
     }
     if (data.status === 0) {
-      window.open("./src/html/personal.html");
+      // register success, then switch login section
+      alert("注册成功，现在可以登录此账号！");
+      signupLogin.click();
     }
   } catch (err) {
     alert(err.message);
@@ -167,7 +170,7 @@ eyes.forEach((eye) => {
   });
 });
 
-// // forgot password
+// //TODO: forgot password
 // forgotPassword.addEventListener("click", function (e) {
 //   e.preventDefault();
 //   e.stopPropagation();

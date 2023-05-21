@@ -241,6 +241,7 @@ main {
   margin: 0 auto;
   background-color: #f6f6f6;
   width: 130rem;
+  height: 45rem;
 }
 
 .description .left {
@@ -264,6 +265,7 @@ main {
 }
 
 .description .left .left-bottom {
+  margin-top: 8rem;
   width: 100%;
   display: flex;
   justify-content: space-around;

@@ -205,6 +205,10 @@
   font-size: 1.4rem;
 }
 
+.header-time span {
+  color: #00a9f2;
+}
+
 .header-center {
   flex: 1;
   margin: 0 4.8rem;
@@ -301,13 +305,43 @@
   position: relative;
   width: 65rem;
   height: 36.6rem;
-  background-color: skyblue;
+  background-color: #ced4da;
   border-radius: 10px;
   overflow: hidden;
 }
 
-.banner img {
+.banner .banner-article-title {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 4.4rem;
   width: 65rem;
+  height: 36.6rem;
+}
+
+.banner-ul li {
+  position: relative;
+}
+
+.banner .banner-article-hot {
+  position: absolute;
+  left: 5rem;
+  top: 5rem;
+  font-size: 2.4rem;
+}
+
+.banner-ul li a {
+  position: relative;
+}
+
+.banner-ul li p {
+  position: absolute;
+  left: 0rem;
+  bottom: 12rem;
+  padding-left: 2rem;
+  width: 65rem;
+  color: #fff;
+  font-size: 3rem;
 }
 
 .banner ul {
@@ -495,9 +529,26 @@ main .right {
 
 /* personal page aside */
 .personal-page-aside {
+  position: relative;
   margin-top: 2rem;
   margin-bottom: 1rem;
   width: 100%;
+}
+
+.order {
+  position: fixed;
+  right: 1rem;
+  top: 80%;
+  margin-bottom: 1rem;
+  padding: 1.2rem 1.6rem;
+  background-color: #00a9f2;
+  border: none;
+  transition: all 0.5s;
+  z-index: 999;
+}
+
+.order:hover {
+  background-color: #228be6;
 }
 
 .articles {
@@ -541,14 +592,20 @@ main .right {
   border-radius: 10px;
   margin-bottom: 0.5rem;
   height: 16rem;
+  background-color: #ced4da;
 }
 
-.article-item a img {
+.article-item a .item-article-title {
   width: 100%;
+  height: 16rem;
+  font-size: 2.4rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
   transition: all 0.5s;
 }
 
-.article-item a img:hover {
+.article-item a .item-article-title:hover {
   transform: scale(1.1);
 }
 

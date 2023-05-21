@@ -10,7 +10,7 @@ const registerHandler = function (req, res) {
   if (!userinfo.email || !userinfo.password) {
     return res.send({
       status: 1,
-      message: "user email or password should not null!",
+      message: "用户邮箱和密码不能为空！",
     });
   }
   const sql1 = `select * from users where email=?`;
@@ -23,7 +23,7 @@ const registerHandler = function (req, res) {
     if (results.length > 0) {
       return res.send({
         status: 1,
-        message: "user email has been used, please try another email!",
+        message: "此用户邮箱已被使用，请更换其他邮箱！",
       });
     }
     // if user email could use, then try add to database and register success
@@ -38,11 +38,11 @@ const registerHandler = function (req, res) {
         if (results.affectedRows !== 1) {
           return res.send({
             status: 1,
-            message: "register user failed, please try again!",
+            message: "注册用户失败，请再次尝试！",
           });
         }
         // register success
-        return res.send({ status: 0, message: "register success" });
+        return res.send({ status: 0, message: "注册成功！" });
       }
     );
   });
@@ -59,19 +59,19 @@ const loginHandler = function (req, res) {
     if (err)
       return res.send({
         status: 1,
-        message: "login failed!",
+        message: "登录失败！",
       });
     // if excute sql success, but the search results not equal to 1
     if (results.length !== 1)
       return res.send({
         status: 1,
-        message: "login failed!",
+        message: "登录失败！",
       });
     // if input password equal to user password which storage in database, then send token to client and login success
     if (results[0].password !== userinfo.password) {
       return res.send({
         status: 1,
-        message: "password err!",
+        message: "密码错误！",
       });
     }
     const user = { email: results[0].email };
@@ -81,7 +81,7 @@ const loginHandler = function (req, res) {
     });
     return res.send({
       status: 0,
-      message: "login success!",
+      message: "登录成功！",
       // 为了方便客户端使用 Token，在服务器端直接拼接上 Bearer 的前缀
       token: "Bearer " + tokenStr,
     });
