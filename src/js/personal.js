@@ -268,18 +268,19 @@ const renderMapAndWeather = function () {
       latitude = position.coords.latitude;
       longitude = position.coords.longitude;
       console.log(latitude, longitude);
-      const map = L.map("map").setView([30.4670707, 114.4289312], 15);
+      // 30.4670707, 114.4289312
+      const map = L.map("map").setView([latitude, longitude], 15);
       L.tileLayer("https://tile.openstreetmap.org/{z}/{x}/{y}.png", {
         maxZoom: 19,
         attribution:
           '&copy; <a href="http://www.openstreetmap.org/copyright">OpenStreetMap</a>',
       }).addTo(map);
-      const marker = L.marker([30.4670707, 114.4289312]).addTo(map);
+      const marker = L.marker([latitude, longitude]).addTo(map);
       // render weather
       latitude = Number(latitude.toFixed(2));
       longitude = Number(longitude.toFixed(2));
-      latitude = 30.47;
-      longitude = 114.43;
+      // latitude = 30.47;
+      // longitude = 114.43;
       getWeatherData(longitude, latitude);
     },
     // get position failed
